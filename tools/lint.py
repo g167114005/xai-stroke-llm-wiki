@@ -25,7 +25,8 @@ NUM = re.compile(r"(?<![\w.])\d[\d,]*(?:\.\d+)?")
 def norm(s):
     for a in "‐‑‒–—−­":
         s = s.replace(a, "-")
-    return re.sub(r"[\s,]", "", s)
+    s = re.sub(r"(?<=\d),(?=\d{3}(?!\d))", "", s)   # 千分位逗號：3,502 → 3502
+    return re.sub(r"\s+", " ", s)                    # 空白只壓縮、不刪除，避免相鄰數字黏在一起
 
 def load_sources():
     with open(os.path.join(ROOT, "sources.csv"), encoding="utf-8") as f:
