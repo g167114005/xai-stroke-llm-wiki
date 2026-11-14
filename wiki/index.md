@@ -32,7 +32,7 @@
 - [[by-xai-paradigm]]：依解釋方式對照
 - [[internal-vs-external]]：內部 vs 外部驗證的 AUC
 
-## 論文頁（已 ingest 16 篇，另加 review）
+## 論文頁（已 ingest 24 篇，另加 review）
 
 ### 偵測分類
 - [[kuzan2026]]：Kuzan et al.（2026）DWI 深度學習偵測急性缺血性中風：多中心外部驗證
@@ -42,12 +42,16 @@
 - [[ahmedmm2026]]：Ahmed M.M. et al.（2026）Swin Transformer–BiLSTM 與 ensemble 做多模態中風偵測與風險預測
 - [[lee2023]]：Lee et al.（2023）CNN 在超急性期 DWI 上偵測中風並分類血管供應區
 - [[elsayed2025]]：Elsayed et al.（2025）EBDS：ViT＋VGG16 混合模型做 CT 中風診斷
+- [[diaz2026]]：Diaz et al.（2026）AGTS-Net：依解剖分區的兩階段 NCCT 中風分類
 
 ### 功能預後
 - [[li2026]]：Li et al.（2026）多參數 MRI 預測中風預後：梗塞位置＋radiomics＋腦部衰弱度
 - [[huangh2026]]：Huang H. et al.（2026）Spatial radiomics nomogram 預測 AIS 不良預後（多中心）
 - [[gerbasi2022]]：Gerbasi et al.（2022）追蹤 DWI 與 T2-FLAIR 的 radiomics 對 AIS 預後的價值
 - [[wangz2025]]：Wang Z. et al.（2025）多 PLD ASL 全腦與梗塞區 radiomics 預測 AIS 預後
+- [[bacon2026]]：Bacon et al.（2026）可解釋的雙流 EEG-MRI 融合找出中風運動恢復的結構—功能特徵
+- [[ozkara2024]]：Ozkara et al. (2024)（2024）只用影像參數預測前循環 LVO 病人的功能預後
+- [[zhangl2023]]：Zhang L. et al.（2023）NCCT radiomics 預測接受傳統治療的 AIS 病人預後
 
 ### 併發症與無效再通
 - [[huangl2025]]：Huang L. et al.（2025）以 ASPECTS 分區做 CT radiomics 預測惡性腦水腫
@@ -56,6 +60,10 @@
 
 ### 風險與病因
 - [[tang2026]]：Tang et al.（2026）頸動脈斑塊 CTA 的深度學習＋傳統特徵融合模型預測中風風險
+- [[sakai2026]]：Sakai et al.（2026）可解釋 ML 判斷 ESUS 病人的鈣化頸動脈斑塊是不是元兇
+- [[leey2026]]：Lee Y. et al.（2026）灌流 MRI 的 hypoperfusion intensity ratio 預測 MCA 阻塞是否源自顱內動脈粥狀硬化
 
 ### 其他
 - [[zatcepin2024]]：Zatcepin et al.（2024）用機器學習找出簡化 TSPO PET 定量所需的資訊
+- [[wangm2023]]：Wang M. et al.（2023）用 MRI 與可解釋 ML 判斷中風病人的認知與運動障礙程度
+- [[yin2022]]：Yin et al.（2022）MRA 深度學習區分出血型與缺血型毛毛樣腦血管病

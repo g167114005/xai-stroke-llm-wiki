@@ -19,3 +19,12 @@
   - `wangz2025`（Wang Z. et al.）：新增論文頁、加入比較頁；議題頁新增證據：無。
   - `lee2023`（Lee et al.）：新增論文頁、加入比較頁；議題頁新增證據：無。
   - `elsayed2025`（Elsayed et al.）：新增論文頁、加入比較頁；議題頁新增證據：無。
+- 批次 ingest（8 篇）：
+  - `bacon2026`（Bacon et al.）：新增論文頁、加入比較頁；議題頁新增證據：無。
+  - `ozkara2024`（Ozkara et al. (2024)）：新增論文頁、加入比較頁；議題頁新增證據：shap-feature-dependence。
+  - `sakai2026`（Sakai et al.）：新增論文頁、加入比較頁；議題頁新增證據：無。
+  - `wangm2023`（Wang M. et al.）：新增論文頁、加入比較頁；議題頁新增證據：無。
+  - `zhangl2023`（Zhang L. et al.）：新增論文頁、加入比較頁；議題頁新增證據：無。
+  - `yin2022`（Yin et al.）：新增論文頁、加入比較頁；議題頁新增證據：無。
+  - `diaz2026`（Diaz et al.）：新增論文頁、加入比較頁；議題頁新增證據：無。
+  - `leey2026`（Lee Y. et al.）：新增論文頁、加入比較頁；議題頁新增證據：無。

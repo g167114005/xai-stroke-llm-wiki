@@ -15,6 +15,8 @@ title: 依解釋方式對照（影像顯著圖 vs SHAP）
 | [[tang2026]] | 影像顯著圖 | SHAP＋Grad-CAM | SHAP 只見於 Methods，無結果 |
 | [[lee2023]] | 影像顯著圖 | Grad-CAM | 正文未個別說明 |
 | [[elsayed2025]] | 影像顯著圖 | Grad-CAM＋LIME | 正文未個別說明 |
+| [[yin2022]] | 影像顯著圖 | Grad-CAM | 正文未個別說明 |
+| [[diaz2026]] | 影像顯著圖 | Grad-CAM | 正文未個別說明 |
 | [[li2026]] | SHAP | SHAP | 正文未個別說明 |
 | [[huangh2026]] | SHAP | SHAP | 正文未個別說明 |
 | [[gerbasi2022]] | SHAP | TreeSHAP | 正文未個別說明 |
@@ -23,6 +25,12 @@ title: 依解釋方式對照（影像顯著圖 vs SHAP）
 | [[gu2026]] | SHAP | SHAP | 歸因穩定性部分證據 |
 | [[zatcepin2024]] | SHAP | SHAP | fidelity 間接證據 |
 | [[wangz2025]] | SHAP | SHAP | 正文未個別說明 |
+| [[bacon2026]] | SHAP | SHAP（Kernel Explainer） | 正文未個別說明 |
+| [[ozkara2024]] | SHAP | SHAP | 正文未個別說明 |
+| [[sakai2026]] | SHAP | SHAP | 正文未個別說明 |
+| [[wangm2023]] | SHAP | SHAP | 正文未個別說明 |
+| [[zhangl2023]] | SHAP | SHAP | 正文未個別說明 |
+| [[leey2026]] | SHAP | SHAP | 正文未個別說明 |
 
 ## 怎麼讀這張表
 - Review 依主要解釋方式把 30 篇分成影像顯著圖（n = 10）與 SHAP 特徵歸因（n = 20）[review, §4.4]。
