@@ -1,0 +1,75 @@
+{"topic":"SHAP 與 Grad-CAM 的方法學限制","slides":[
+{"n":1,"layout":"title","title":"解釋，不等於可信","sub":"SHAP 與 Grad-CAM 用在中風影像 AI 的六個方法學限制","meta":true,
+ "bullets":[{"t":"北醫 G167114005 醫學院人工智慧醫療碩士在職專班 碩二 鄭為遠","meta":true},{"t":"內容全部取自自建的 LLM Wiki，每個要點都能追回原始論文的頁碼","meta":true}]},
+{"n":2,"title":"為什麼中風影像 AI 需要「解釋」","bullets":[
+ {"t":"中風分秒必爭，AI 被用在三個決策點：要不要打通血管、會不會出現併發症、之後恢復得如何","refs":["stroke-terms#C1"]},
+ {"t":"近年模型的 AUC 常常超過 0.85 到 0.90，看起來很準","refs":["auc#C1"]},
+ {"t":"研究者也替模型加上解釋：在影像上畫熱圖，或排出最重要的特徵","refs":["grad-cam#C1","shap#C1"]},
+ {"t":"問題是：「看起來合理」加上「AUC 很高」，不能證明解釋是忠實的","refs":["review#C17"],"em":true}]},
+{"n":3,"layout":"two","title":"兩種解釋：Grad-CAM 與 SHAP","cols":[
+ {"h":"Grad-CAM","tag":"模型看了哪裡","bullets":[
+  {"t":"在影像上疊一張熱圖，越紅代表模型越依賴那一塊","lay":"grad-cam"},
+  {"t":"多搭配 CNN 或 Vision Transformer，用在 CT 或 MRI 上偵測病灶","refs":["grad-cam#C1"]},
+  {"t":"這次評讀的影像顯著圖研究共 10 篇","refs":["grad-cam#C2"]}]},
+ {"h":"SHAP","tag":"哪個特徵最重要","bullets":[
+  {"t":"像小組報告分功勞：算出每個特徵把預測往上推或往下拉多少","lay":"shap"},
+  {"t":"多用在把臨床分數、灌流指標、radiomics 紋理混在一起的表格式模型","refs":["shap#C1"]},
+  {"t":"這次評讀的 SHAP 研究共 20 篇","refs":["shap#C2"]}]}]},
+{"n":4,"title":"我們檢查了什麼","visual":{"type":"stack","label":"30 篇研究的整體偏誤風險","parts":[{"k":"High","v":28,"c":"hi"},{"k":"Unclear","v":2,"c":"un"}],"refs":["review#C2","review#C6"]},"bullets":[
+ {"t":"評讀 30 篇原始研究，三位醫師各自獨立評分","refs":["review#C2","review#C5"]},
+ {"t":"兩套評讀分開做：模型本身的偏誤風險，與解釋本身的可信度","refs":["review#C4"]},
+ {"t":"偏誤風險 High 28 篇（93.3%）、Unclear 兩篇，沒有一篇是 Low","refs":["review#C6"]},
+ {"t":"問題集中在統計分析（Domain 4：26/30）","refs":["review#C7"]}]},
+{"n":5,"kicker":"限制一","title":"特徵彼此相關時，SHAP 排名會跟著算法變","bullets":[
+ {"t":"中風影像的變項常是同一件事的不同量法：ASPECTS、梗塞體積、灌流不足體積、年齡、白質病變彼此相關","refs":["shap-feature-dependence#C1"]},
+ {"t":"SHAP 要假設「拿掉某個特徵後用什麼值來補」；補法不同，回答的其實是不同的問題","refs":["shap-feature-dependence#C2"]},
+ {"t":"例：Li et al. 排名最前面的幾個特徵彼此可能相關，個別排名不宜當成獨立的生物效應","refs":["shap-feature-dependence#C4"]},
+ {"t":"SHAP 值是「這個模型」的解釋量，不是唯一的生物或因果效應","refs":["shap-feature-dependence#C9"],"em":true}],
+ "note":{"t":"這不是演算法出錯，而是所選 value function 的結果","refs":["shap-feature-dependence#C8"]}},
+{"n":6,"kicker":"限制二","title":"排名高，不等於有額外價值","visual":{"type":"pair","a":{"k":"只用臨床資料","v":"0.83"},"b":{"k":"加上影像特徵","v":"0.85"},"cap":"DeLong p = 0.33，差異不顯著","refs":["gerbasi2022#C4"]},"bullets":[
+ {"t":"Gerbasi et al.：影像紋理在 SHAP 排名很前面","refs":["shap-rank-vs-incremental-value#C2"]},
+ {"t":"但加上影像後，AUC 只從 0.83 到 0.85","refs":["shap-rank-vs-incremental-value#C2"]},
+ {"t":"SHAP 說的是模型「用了」什麼，沒有說「少了它會不會變差」","refs":["shap-rank-vs-incremental-value#C1"]},
+ {"t":"要另外做正式的增益鑑別力檢定","refs":["shap-rank-vs-incremental-value#C3"],"em":true}]},
+{"n":7,"kicker":"限制三","title":"Grad-CAM：粗、怕假影、看不到表格資料","bullets":[
+ {"t":"粗：熱圖本質上是一張粗格子圖被放大到 512 × 512 的影像上，畫不出細緻的邊界","refs":["gradcam-coarse-and-artifacts#C1"]},
+ {"t":"怕假影：CT 上靠近顱骨與顱底的 beam-hardening 假影，常造成假陽性的亮區","refs":["gradcam-coarse-and-artifacts#C2"]},
+ {"t":"看不到非影像資料：發病到院時間、血糖、入院 NIHSS 都不在圖上","refs":["gradcam-coarse-and-artifacts#C3"]},
+ {"t":"例：Kuzan et al. 的熱圖大致對到病灶，但病灶邊緣有局部對不準","refs":["gradcam-coarse-and-artifacts#C4"]}]},
+{"n":8,"kicker":"限制四","title":"換一家醫院，AUC 會怎麼變？不一定","visual":{"type":"bars","rows":[
+  {"k":"Cao et al.","a":"0.918","b":"0.755","refs":["validation-stage-discrimination#C6"]},
+  {"k":"Li et al.","a":"0.84","b":"0.86","refs":["validation-stage-discrimination#C3"]},
+  {"k":"Huang L. et al.","a":"0.78","b":"0.88","refs":["validation-stage-discrimination#C5"]}],"la":"內部驗證","lb":"外部驗證"},"bullets":[
+ {"t":"有的下降、有的持平、有的反而上升；review 刻意不計算「平均下降多少」","refs":["validation-stage-discrimination#C1","validation-stage-discrimination#C9"]},
+ {"t":"光看 AUC 差異，無法判斷是掃描儀、病人組成還是前處理造成的","refs":["validation-stage-discrimination#C10"]},
+ {"t":"外部的模型 AUC，也不是「解釋能重現」的證據","refs":["explanation-validity-untested#C11"],"em":true}]},
+{"n":9,"kicker":"限制五","title":"解釋本身幾乎沒被驗證","visual":{"type":"score","items":[
+  {"v":"0 / 20","k":"SHAP 研究有交代 background distribution","refs":["explanation-validity-untested#C7"]},
+  {"v":"10 / 10","k":"影像顯著圖研究的定位只做質性評估","refs":["explanation-validity-untested#C8"]},
+  {"v":"1 篇","k":"做了量化的 fidelity 檢驗","refs":["explanation-validity-untested#C9"]},
+  {"v":"2 篇","k":"在外部資料上檢視解釋，而且都是質性的","refs":["explanation-validity-untested#C9"]},
+  {"v":"10 / 30","k":"解釋性主張被評為 overstated（33.3%）","refs":["explanation-validity-untested#C10"]}]},
+ "note":{"t":"沒報告的面向記為 NR／Unclear，不代表確定沒做","refs":["explanation-validity-untested#C11"]},"bullets":[]},
+{"n":10,"kicker":"限制六","title":"熱圖永遠很肯定","bullets":[
+ {"t":"Grad-CAM 與 SHAP 一定會給你一張圖或一組數字，但不會告訴你模型自己有多少把握","refs":["automation-bias-and-uncertainty#C1"]},
+ {"t":"遇到沒看過的情況（偏癱型偏頭痛、局部癲癇、腦炎、嚴重的移動假影），照樣畫出很亮的熱圖","refs":["automation-bias-and-uncertainty#C2"]},
+ {"t":"把「圖看起來合理」當成「推論是對的」，就是自動化偏誤","refs":["automation-bias-and-uncertainty#C3"]},
+ {"t":"對策是搭配不確定性量化；TrustNet 示範了做法，但有切片層級資料外洩等問題，還不能直接用於臨床","refs":["automation-bias-and-uncertainty#C5","automation-bias-and-uncertainty#C4"],"em":true}]},
+{"n":11,"title":"那該怎麼辦：review 的建議","bullets":[
+ {"t":"SHAP：交代怎麼處理特徵相依與 background distribution，可行時做敏感度分析","refs":["shap-feature-dependence#C11"]},
+ {"t":"Grad-CAM：改用較高解析度的變體，並採用能同時解釋影像與表格變項的多模態架構","refs":["gradcam-coarse-and-artifacts#C6"]},
+ {"t":"解釋要與預測準確度接受同等級的客觀驗證，不能停在「看起來合理」","refs":["gradcam-coarse-and-artifacts#C7"]},
+ {"t":"外部驗證：把掃描儀效應、校準、病人組成、解釋的可重現性分開評估","refs":["validation-stage-discrimination#C12"]},
+ {"t":"臨床轉譯：資料隔離的文件證明、跨廠牌的外部驗證、前瞻性臨床效益試驗","refs":["automation-bias-and-uncertainty#C7"]}]},
+{"n":12,"title":"總結","bullets":[
+ {"t":"熱圖與排名可以輔助解讀，但「看起來合理」加上「AUC 很高」，不能證明解釋是忠實的，更不能證明因果","refs":["review#C17"],"em":true},
+ {"t":"SHAP 的兩個限制：排名受特徵相依影響；排名高不等於有額外價值","refs":["shap-feature-dependence#C9","shap-rank-vs-incremental-value#C3"]},
+ {"t":"Grad-CAM 的限制：解析度粗、怕假影、看不到非影像變項","refs":["gradcam-coarse-and-artifacts#C1","gradcam-coarse-and-artifacts#C2","gradcam-coarse-and-artifacts#C3"]},
+ {"t":"兩者共通：換醫院結果不一、解釋幾乎沒被驗證、不會說自己有多少把握","refs":["validation-stage-discrimination#C1","explanation-validity-untested#C9","automation-bias-and-uncertainty#C1"]},
+ {"t":"這份回顧自己的限制：只查一個資料庫、只收英文文獻；評分者間一致性偏低","refs":["review#C18"]}]},
+{"n":13,"layout":"flow","title":"這份簡報怎麼做的","meta":true,"steps":["raw/ 來源","LLM Wiki＋lint","① 檢索","② 覆蓋率","③ 證據卡","④ 大綱","⑤ 人確認","⑥ 逐頁稿","⑦ 忠實度","⑧ 渲染","⑨ 渲染檢查"],
+ "bullets":[{"t":"先討論、後生成：AI 先訪談需求，確認後才建 wiki","meta":true},
+ {"t":"每個要點右側的代號是證據卡編號，可以一路追回原始論文的頁碼","meta":true},
+ {"t":"流程是事先畫好的 Graph：錯在哪一關，就退回哪一關","meta":true},
+ {"t":"檢查由腳本執行；人只在「大綱」那一關確認一次","meta":true}]}
+]}
