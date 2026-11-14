@@ -8,11 +8,11 @@ title: SHAP 排名高，不等於有額外的預測價值
 SHAP 告訴你模型「用了」哪些特徵，但沒有告訴你「少了它，模型會不會變差」。在特徵彼此相關時，一個排名很前面的影像特徵，可能只是重複了臨床變項已經提供的資訊 [review, §3.2]。
 
 ## 證據
-- （目前已 ingest 的論文中還沒有對應的證據）
+- [[gerbasi2022]]：影像紋理在 SHAP 排名很前面，但加上影像後 AUC 只從 0.83 到 0.85，DeLong p = 0.33 [review, §3.2] [gerbasi2022, p.8]。
 
 ## Review 的立場
 - 高 SHAP 排名不可以與「獨立的增益預測價值」混為一談；要另外做正式的增益鑑別力檢定 [review, §3.2]。
 - 內部 SHAP 排名高，也不保證換一家醫院還成立 [review, §3.3]。
 
 ## 相關頁面
-[[shap]]、[[shap-feature-dependence]]、[[auc]]、Gerbasi et al.（尚未 ingest）
+[[shap]]、[[shap-feature-dependence]]、[[auc]]、[[gerbasi2022]]
