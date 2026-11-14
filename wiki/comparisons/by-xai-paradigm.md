@@ -31,6 +31,13 @@ title: 依解釋方式對照（影像顯著圖 vs SHAP）
 | [[wangm2023]] | SHAP | SHAP | 正文未個別說明 |
 | [[zhangl2023]] | SHAP | SHAP | 正文未個別說明 |
 | [[leey2026]] | SHAP | SHAP | 正文未個別說明 |
+| [[jabal2022]] | SHAP | SHAP | 正文未個別說明 |
+| [[wei2026]] | SHAP | SHAP | 正文未個別說明 |
+| [[ozkara2023]] | SHAP | SHAP | 正文未個別說明 |
+| [[liu2025]] | SHAP | SHAP | 正文未個別說明 |
+| [[zhao2026]] | SHAP | SHAP | 正文未個別說明 |
+| [[hu2025]] | SHAP | SHAP | 正文未個別說明 |
+| [[ahmedae2025]] | 不適用 | 文中提及 Grad-CAM 與 SHAP | 正文未個別說明 |
 
 ## 怎麼讀這張表
 - Review 依主要解釋方式把 30 篇分成影像顯著圖（n = 10）與 SHAP 特徵歸因（n = 20）[review, §4.4]。

@@ -28,3 +28,11 @@
   - `yin2022`（Yin et al.）：新增論文頁、加入比較頁；議題頁新增證據：無。
   - `diaz2026`（Diaz et al.）：新增論文頁、加入比較頁；議題頁新增證據：無。
   - `leey2026`（Lee Y. et al.）：新增論文頁、加入比較頁；議題頁新增證據：無。
+- 批次 ingest（7 篇）：
+  - `ahmedae2025`（Ahmed A.E. et al.）：新增論文頁、加入比較頁；議題頁新增證據：無。
+  - `jabal2022`（Jabal et al.）：新增論文頁、加入比較頁；議題頁新增證據：無。
+  - `wei2026`（Wei et al.）：新增論文頁、加入比較頁；議題頁新增證據：無。
+  - `ozkara2023`（Ozkara et al. (2023)）：新增論文頁、加入比較頁；議題頁新增證據：shap-feature-dependence。
+  - `liu2025`（Liu et al.）：新增論文頁、加入比較頁；議題頁新增證據：validation-stage-discrimination。
+  - `zhao2026`（Zhao et al.）：新增論文頁、加入比較頁；議題頁新增證據：validation-stage-discrimination。
+  - `hu2025`（Hu et al.）：新增論文頁、加入比較頁；議題頁新增證據：無。

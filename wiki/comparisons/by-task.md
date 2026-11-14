@@ -22,15 +22,22 @@ title: 依臨床任務對照
 | [[bacon2026]] | 功能預後 | EEG＋結構 MRI | DS-CMF（雙流跨模態融合） | SHAP（Kernel Explainer） | 內部 cross-validation | High |
 | [[ozkara2024]] | 功能預後 | CTA＋CT perfusion | XGBoost（另比較 CatBoost、Random Forest） | SHAP | 內部（單一中心） | High |
 | [[zhangl2023]] | 功能預後 | NCCT | SVM（fusion model） | SHAP | 內部測試集（兩中心） | High |
+| [[jabal2022]] | 功能預後 | NCCT＋CTA（自動萃取） | ML 模型（臨床、影像、合併） | SHAP | 內部（兩中心） | High |
+| [[ozkara2023]] | 功能預後 | CT perfusion＋臨床與檢驗 | XGBoost 等六種演算法 | SHAP | 內部（訓練／測試切分） | High |
+| [[liu2025]] | 功能預後 | 多期 CTA＋CT perfusion | LR、SVM、RF、DT、XGBoost | SHAP | 內部（7:3） | High |
 | [[huangl2025]] | 併發症與無效再通 | NCCT＋CTA | 臨床＋radiomics 融合模型 | SHAP | 外部驗證（2 家中心） | High |
 | [[cao2026]] | 併發症與無效再通 | 動態 CTA | 多種 ML 模型（Boruta＋LASSO 選特徵） | SHAP（review 另記 LIME） | 外部驗證（另一家醫院） | High |
 | [[gu2026]] | 併發症與無效再通 | MRI（梗塞位置與 radiomics） | SVM（Topo-Rad） | SHAP | 外部驗證（另一家醫院） | High |
+| [[hu2025]] | 併發症與無效再通 | CTA 等影像指標＋臨床資料 | Random Forest（另比較 SVM、DT、KNN） | SHAP | 內部測試集（單一中心） | High |
 | [[tang2026]] | 風險與病因 | 頸動脈 CTA | Swin Transformer 特徵＋傳統特徵融合 | SHAP＋Grad-CAM | 內部測試集 | High |
 | [[sakai2026]] | 風險與病因 | 頸部 CTA | CatBoost | SHAP | 內部 | High |
 | [[leey2026]] | 風險與病因 | 灌流 MRI | XGBoost | SHAP | 內部 | High |
+| [[wei2026]] | 風險與病因 | 頸動脈 CTA | SVM（combined model） | SHAP | 內部（獨立測試集） | High |
+| [[zhao2026]] | 風險與病因 | CTA（血管周圍脂肪） | XGBoost（combined model） | SHAP | 外部驗證（兩組） | High |
 | [[zatcepin2024]] | 其他（影像定量） | TSPO PET＋MRI | random forest regressor | SHAP | leave-one-out | High |
 | [[wangm2023]] | 其他（障礙程度分級） | MRI（T2 Propeller） | Random Forest、LDA 等多種模型 | SHAP | 內部 | High |
 | [[yin2022]] | 其他（毛毛樣腦血管病） | MRA | ResNet18（transfer learning） | Grad-CAM | 內部測試集 | High |
+| [[ahmedae2025]] | 其他（回顧文章） | NCCT、MRI、CTA 等 | （回顧，無自建模型） | 文中提及 Grad-CAM 與 SHAP | 不適用 | 不適用（未納入） |
 
 ## 怎麼讀這張表
 - 任務分類參考 review 的三個決策點：再灌流分流（偵測分類）、急性併發症、功能預後 [review, §3]；「風險與病因」「其他」是本 wiki 為了放進全部來源而加的分類。
