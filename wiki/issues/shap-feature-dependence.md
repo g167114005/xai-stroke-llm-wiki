@@ -11,6 +11,7 @@ SHAP 要算「拿掉某個特徵會怎樣」，就得假設拿掉後用什麼值
 
 ## 證據
 - [[li2026]]：SHAP 排名靠前的 lentiform nucleus 病灶負荷、WMH、M6 病灶負荷彼此可能相關，個別排名不宜當成獨立的生物效應 [review, §4.1] [li2026, p.2]。
+- [[huangl2025]]：SHAP 排名靠前的 ASPECTS、NIHSS、側枝循環分數屬於 review 所說彼此相依的中風變項 [review, §3.3] [review, §4.1]。
 
 ## Review 的立場
 - 特徵獨立並不是 Shapley value 的公理；相關特徵之間功勞怎麼分，是所選 value function 的結果，不是演算法「出錯」[review, §4.1]。

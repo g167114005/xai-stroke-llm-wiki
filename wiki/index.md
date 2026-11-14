@@ -32,7 +32,7 @@
 - [[by-xai-paradigm]]：依解釋方式對照
 - [[internal-vs-external]]：內部 vs 外部驗證的 AUC
 
-## 論文頁（已 ingest 6 篇，另加 review）
+## 論文頁（已 ingest 7 篇，另加 review）
 
 ### 偵測分類
 - [[kuzan2026]]：Kuzan et al.（2026）DWI 深度學習偵測急性缺血性中風：多中心外部驗證
@@ -43,3 +43,6 @@
 - [[li2026]]：Li et al.（2026）多參數 MRI 預測中風預後：梗塞位置＋radiomics＋腦部衰弱度
 - [[huangh2026]]：Huang H. et al.（2026）Spatial radiomics nomogram 預測 AIS 不良預後（多中心）
 - [[gerbasi2022]]：Gerbasi et al.（2022）追蹤 DWI 與 T2-FLAIR 的 radiomics 對 AIS 預後的價值
+
+### 併發症與無效再通
+- [[huangl2025]]：Huang L. et al.（2025）以 ASPECTS 分區做 CT radiomics 預測惡性腦水腫
