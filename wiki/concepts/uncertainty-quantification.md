@@ -11,8 +11,8 @@ title: 不確定性量化（uncertainty quantification, UQ）
 
 ## 在中風影像怎麼用
 - Review 主張 XAI 必須搭配不確定性量化，否則遇到沒看過的情況，模型照樣會畫出很肯定的熱圖 [review, §5.1]。
-- 實例是 Inamdar et al.（尚未 ingest） 的 TrustNet，把 Monte Carlo dropout 與 Grad-CAM 結合 [review, §5.2]。
+- 實例是 [[inamdar2026]] 的 TrustNet，把 Monte Carlo dropout 與 Grad-CAM 結合 [review, §5.2]。
 - 相關風險見 [[automation-bias-and-uncertainty]]。
 
 ## 相關頁面
-[[grad-cam]]、[[calibration]]、[[automation-bias-and-uncertainty]]、Inamdar et al.（尚未 ingest）
+[[grad-cam]]、[[calibration]]、[[automation-bias-and-uncertainty]]、[[inamdar2026]]

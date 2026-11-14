@@ -14,6 +14,7 @@ title: 解釋本身幾乎沒有被驗證過
 ## 證據
 - [[kuzan2026]]：外部資料上的解釋只做了質性檢視 [review, §4.4]。
 - [[tuxunjiang2025]]：外部資料上的解釋只做了質性檢視 [review, §4.4]。
+- [[inamdar2026]]：唯一做量化 fidelity 檢驗的研究；穩定性只有部分證據 [review, §4.4]。
 
 ## Review 的立場
 - 20 篇 SHAP 研究沒有一篇交代 background/reference distribution [review, §4.4]。
@@ -24,4 +25,4 @@ title: 解釋本身幾乎沒有被驗證過
 - 評分者對這些面向的一致性本身也不高（例如解釋穩定度 κ = −0.10），顯示這類判斷需要詮釋 [review, §2]。
 
 ## 相關頁面
-[[shap]]、[[grad-cam]]、[[probast-ai]]、[[by-xai-paradigm]]、Inamdar et al.（尚未 ingest）
+[[shap]]、[[grad-cam]]、[[probast-ai]]、[[by-xai-paradigm]]、[[inamdar2026]]

@@ -9,6 +9,7 @@ title: 依解釋方式對照（影像顯著圖 vs SHAP）
 |---|---|---|---|
 | [[kuzan2026]] | 影像顯著圖 | Grad-CAM | 外部資料質性檢視 |
 | [[tuxunjiang2025]] | 影像顯著圖 | Grad-CAM | 外部資料質性檢視 |
+| [[inamdar2026]] | 影像顯著圖 | 量化 Grad-CAM＋不確定性量化 (UQ) | 量化 fidelity（MoRF／AUPC）；穩定性部分證據 |
 
 ## 怎麼讀這張表
 - Review 依主要解釋方式把 30 篇分成影像顯著圖（n = 10）與 SHAP 特徵歸因（n = 20）[review, §4.4]。

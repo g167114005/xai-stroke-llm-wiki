@@ -10,7 +10,7 @@ title: 熱圖永遠很肯定：自動化偏誤與不確定性
 使用者如果把「圖看起來合理」當成「推論是對的」，就是自動化偏誤 (automation bias) [review, §5.1]。
 
 ## 證據
-- （目前已 ingest 的論文中還沒有對應的證據）
+- [[inamdar2026]]：示範把不確定性與熱圖結合、對模糊切片暫緩判讀；但有切片層級資料外洩等問題，不能直接用於臨床 [review, §5.2]。
 
 ## Review 的立場
 - XAI 必須搭配不確定性量化（Bayesian deep learning、Monte Carlo dropout、deep ensemble、conformal prediction）[review, §5.2]。
