@@ -32,9 +32,12 @@
 - [[by-xai-paradigm]]：依解釋方式對照
 - [[internal-vs-external]]：內部 vs 外部驗證的 AUC
 
-## 論文頁（已 ingest 3 篇，另加 review）
+## 論文頁（已 ingest 4 篇，另加 review）
 
 ### 偵測分類
 - [[kuzan2026]]：Kuzan et al.（2026）DWI 深度學習偵測急性缺血性中風：多中心外部驗證
 - [[tuxunjiang2025]]：Tuxunjiang et al.（2025）Cross-attention ViT 用多序列 MRI 判斷中風嚴重度
 - [[inamdar2026]]：Inamdar et al.（2026）TrustNet：結合不確定性量化與量化 Grad-CAM 的 CT 中風偵測
+
+### 功能預後
+- [[li2026]]：Li et al.（2026）多參數 MRI 預測中風預後：梗塞位置＋radiomics＋腦部衰弱度

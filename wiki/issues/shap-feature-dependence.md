@@ -10,7 +10,7 @@ SHAP 要算「拿掉某個特徵會怎樣」，就得假設拿掉後用什麼值
 用 marginal 的補法時，可能會評估到現實中幾乎不存在的特徵組合 [review, §4.1]。
 
 ## 證據
-- （目前已 ingest 的論文中還沒有對應的證據）
+- [[li2026]]：SHAP 排名靠前的 lentiform nucleus 病灶負荷、WMH、M6 病灶負荷彼此可能相關，個別排名不宜當成獨立的生物效應 [review, §4.1] [li2026, p.2]。
 
 ## Review 的立場
 - 特徵獨立並不是 Shapley value 的公理；相關特徵之間功勞怎麼分，是所選 value function 的結果，不是演算法「出錯」[review, §4.1]。
