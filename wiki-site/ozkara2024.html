@@ -1,0 +1,39 @@
+<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ozkara et al. (2024)（2024）只用影像參數預測前循環 LVO 病人的功能預後</title><style>:root{--bg:#F6F3EC;--ink:#1A2331;--mut:#5A6475;--rule:#D8D2C5;--acc:#0E6B70;--warn:#B3432A;--card:#FFFDF8}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.75 "Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif}
+header{border-bottom:1px solid var(--rule);background:var(--card)}header div,main{max-width:860px;margin:0 auto;padding:14px 24px}
+header a{margin-right:18px;font-weight:600}main{padding-top:28px;padding-bottom:80px}a{color:var(--acc)}
+h1{font-size:30px;line-height:1.3;margin:.2em 0 .6em}h2{font-size:21px;margin:1.8em 0 .5em;padding-bottom:4px;border-bottom:2px solid var(--rule)}h3{font-size:18px;margin:1.4em 0 .3em}
+table{border-collapse:collapse;width:100%;font-size:15px;margin:1em 0;display:block;overflow-x:auto}th,td{border:1px solid var(--rule);padding:6px 10px;text-align:left;vertical-align:top}th{background:var(--card)}
+.meta{font-size:14px;color:var(--mut);background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:10px 16px;margin-bottom:8px}.meta b{color:var(--ink)}
+.cite{font:12.5px ui-monospace,Consolas,monospace;color:var(--mut);background:var(--card);border:1px solid var(--rule);border-radius:4px;padding:0 5px;white-space:nowrap}
+blockquote{margin:1em 0;padding:8px 16px;border-left:4px solid var(--warn);background:var(--card)}code{background:var(--card);border:1px solid var(--rule);border-radius:4px;padding:0 4px;font-size:.9em}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:24px 0}.cards a{display:block;background:var(--card);border:1px solid var(--rule);border-top:5px solid var(--acc);border-radius:8px;padding:18px 20px;text-decoration:none;color:var(--ink)}
+.cards b{display:block;font-size:20px;color:var(--acc);margin-bottom:4px}.cards span{font-size:15px;color:var(--mut)}</style></head><body><header><div><a href="../index.html">首頁</a><a href="../wiki-site/index.html">Wiki</a><a href="../slides/index.html">簡報</a><a href="https://github.com/g167114005/xai-stroke-llm-wiki">GitHub</a></div></header><main><div class="meta"><b>type</b> paper　<b>key</b> ozkara2024　<b>year</b> 2024　<b>source_file</b> Journal of Neuroimaging - 2024 - Ozkara - Utilizing imaging parameters for functional outcome prediction in acute ischemic.pdf　<b>task</b> 功能預後　<b>modality</b> CTA＋CT perfusion　<b>xai</b> SHAP　<b>validation</b> 內部（單一中心）</div><h1>Ozkara et al. (2024)（2024）只用影像參數預測前循環 LVO 病人的功能預後</h1>
+<h2>一句話</h2>
+<p>完全不看病人的臨床資料，只用 CT 影像量出來的數值，預測三個月後的恢復。</p>
+<h2>研究設計</h2>
+<ul>
+<li>單一中心回溯性研究，180 位病人（102 位女性）；良好預後定義為 90 天 mRS 0-2 <span class="cite">ozkara2024 p.1</span>。</li>
+<li>預測變項只包含影像參數 <span class="cite">ozkara2024 p.1</span>。</li>
+</ul>
+<h2>模型與結果</h2>
+<ul>
+<li>模型：XGBoost（另比較 CatBoost、Random Forest）</li>
+<li>XGBoost 最好：AUROC 0.91、precision 0.72、recall 0.81、AUPRC 0.83、accuracy 0.78、Brier score 0.17 <span class="cite">ozkara2024 p.1</span>。</li>
+</ul>
+<h2>XAI 怎麼做</h2>
+<ul>
+<li>用 SHAP 判斷預測變項的相對重要性 <span class="cite">ozkara2024 p.3</span>；多期 CTA 側枝循環分數是最重要的特徵 <span class="cite">ozkara2024 p.1</span>。</li>
+</ul>
+<h2>Review 的評論</h2>
+<ul>
+<li>Review 把它放在未於正文詳述的 22 篇之中，但全文仍做了 PROBAST+AI 與 XAI 評讀 <span class="cite">review §2</span>。</li>
+<li>偏誤風險 (risk of bias)：High。30 篇裡有 28 篇是 High，只有 Li 與 Huang H. 兩篇是 Unclear，沒有任何一篇是 Low <span class="cite">review §2</span>。</li>
+</ul>
+<h2>相關頁面</h2>
+<ul>
+<li>觀念：<a href="shap.html">shap</a>、<a href="stroke-terms.html">stroke-terms</a>、<a href="auc.html">auc</a></li>
+<li>議題：<a href="shap-feature-dependence.html">shap-feature-dependence</a></li>
+<li>比較：<a href="by-task.html">by-task</a>、<a href="by-xai-paradigm.html">by-xai-paradigm</a></li>
+<li>裁判來源：<a href="review.html">review</a></li>
+</ul></main></body></html>

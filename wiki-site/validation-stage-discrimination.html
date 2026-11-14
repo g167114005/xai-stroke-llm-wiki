@@ -1,0 +1,32 @@
+<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>換一家醫院，AUC 會怎麼變？結果並不一致</title><style>:root{--bg:#F6F3EC;--ink:#1A2331;--mut:#5A6475;--rule:#D8D2C5;--acc:#0E6B70;--warn:#B3432A;--card:#FFFDF8}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.75 "Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif}
+header{border-bottom:1px solid var(--rule);background:var(--card)}header div,main{max-width:860px;margin:0 auto;padding:14px 24px}
+header a{margin-right:18px;font-weight:600}main{padding-top:28px;padding-bottom:80px}a{color:var(--acc)}
+h1{font-size:30px;line-height:1.3;margin:.2em 0 .6em}h2{font-size:21px;margin:1.8em 0 .5em;padding-bottom:4px;border-bottom:2px solid var(--rule)}h3{font-size:18px;margin:1.4em 0 .3em}
+table{border-collapse:collapse;width:100%;font-size:15px;margin:1em 0;display:block;overflow-x:auto}th,td{border:1px solid var(--rule);padding:6px 10px;text-align:left;vertical-align:top}th{background:var(--card)}
+.meta{font-size:14px;color:var(--mut);background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:10px 16px;margin-bottom:8px}.meta b{color:var(--ink)}
+.cite{font:12.5px ui-monospace,Consolas,monospace;color:var(--mut);background:var(--card);border:1px solid var(--rule);border-radius:4px;padding:0 5px;white-space:nowrap}
+blockquote{margin:1em 0;padding:8px 16px;border-left:4px solid var(--warn);background:var(--card)}code{background:var(--card);border:1px solid var(--rule);border-radius:4px;padding:0 4px;font-size:.9em}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:24px 0}.cards a{display:block;background:var(--card);border:1px solid var(--rule);border-top:5px solid var(--acc);border-radius:8px;padding:18px 20px;text-decoration:none;color:var(--ink)}
+.cards b{display:block;font-size:20px;color:var(--acc);margin-bottom:4px}.cards span{font-size:15px;color:var(--mut)}</style></head><body><header><div><a href="../index.html">首頁</a><a href="../wiki-site/index.html">Wiki</a><a href="../slides/index.html">簡報</a><a href="https://github.com/g167114005/xai-stroke-llm-wiki">GitHub</a></div></header><main><div class="meta"><b>type</b> issue</div><h1>換一家醫院，AUC 會怎麼變？結果並不一致</h1>
+<h2>問題是什麼</h2>
+<p>常聽到的說法是「模型一到外部就變差」。Review 把各研究的內部驗證與獨立外部驗證配對起來看，發現有的下降、有的持平、有的反而上升 <span class="cite">review §4.3</span>。<br />
+而且要先分清楚比的是哪兩個階段：訓練／development、內部驗證、獨立外部驗證是三件不同的事 <span class="cite">review §4.3</span>。</p>
+<h2>證據</h2>
+<ul>
+<li><a href="li2026.html">li2026</a>：內部 0.84 → 外部 0.86（Δ = +0.020），外部沒有變差 <span class="cite">review §4.3</span>。</li>
+<li><a href="huangh2026.html">huangh2026</a>：development 0.894 → 外部 0.874；因為沒有獨立的內部驗證，review 另外畫、不算配對比較 <span class="cite">review §4.3</span>。</li>
+<li><a href="huangl2025.html">huangl2025</a>：內部 0.78 → 外部 0.88（Δ = +0.100），外部反而較高 <span class="cite">review §4.3</span>。</li>
+<li><a href="cao2026.html">cao2026</a>：內部 0.918 → 外部 0.755（Δ = −0.163），三組配對中唯一明顯下降 <span class="cite">review §4.3</span>。</li>
+<li><a href="liu2025.html">liu2025</a>：只有內部切分：訓練 0.964、測試 0.837 <span class="cite">liu2025 p.2</span>。這是訓練對測試，不是 review 所說的內部對外部比較 <span class="cite">review §4.3</span>。</li>
+<li><a href="zhao2026.html">zhao2026</a>：內部測試 0.847，兩組外部驗證 0.856 與 0.876 <span class="cite">zhao2026 p.2</span>。Review 正文的配對比較沒有納入這篇 <span class="cite">review §4.3</span>。</li>
+</ul>
+<h2>Review 的立場</h2>
+<ul>
+<li>Review 刻意不計算「平均下降多少」，因為各研究異質性太大 <span class="cite">review §4.3</span>。</li>
+<li>掃描儀廠牌、掃描參數、病人組成、前處理都可能影響表現，但光看 AUC 差異無法判斷是哪一個造成的 <span class="cite">review §4.3</span>。</li>
+<li>外部 AUC 維持住，也不能證明是 harmonization 的功勞 <span class="cite">review §4.3</span>。</li>
+<li>建議：未來研究應把掃描儀效應、校準、病人組成、解釋的可重現性分開評估 <span class="cite">review §4.3</span>。</li>
+</ul>
+<h2>相關頁面</h2>
+<p><a href="external-validation.html">external-validation</a>、<a href="auc.html">auc</a>、<a href="calibration.html">calibration</a>、<a href="internal-vs-external.html">internal-vs-external</a></p></main></body></html>

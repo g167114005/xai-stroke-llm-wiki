@@ -1,0 +1,56 @@
+<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ingest 與維護紀錄</title><style>:root{--bg:#F6F3EC;--ink:#1A2331;--mut:#5A6475;--rule:#D8D2C5;--acc:#0E6B70;--warn:#B3432A;--card:#FFFDF8}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.75 "Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif}
+header{border-bottom:1px solid var(--rule);background:var(--card)}header div,main{max-width:860px;margin:0 auto;padding:14px 24px}
+header a{margin-right:18px;font-weight:600}main{padding-top:28px;padding-bottom:80px}a{color:var(--acc)}
+h1{font-size:30px;line-height:1.3;margin:.2em 0 .6em}h2{font-size:21px;margin:1.8em 0 .5em;padding-bottom:4px;border-bottom:2px solid var(--rule)}h3{font-size:18px;margin:1.4em 0 .3em}
+table{border-collapse:collapse;width:100%;font-size:15px;margin:1em 0;display:block;overflow-x:auto}th,td{border:1px solid var(--rule);padding:6px 10px;text-align:left;vertical-align:top}th{background:var(--card)}
+.meta{font-size:14px;color:var(--mut);background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:10px 16px;margin-bottom:8px}.meta b{color:var(--ink)}
+.cite{font:12.5px ui-monospace,Consolas,monospace;color:var(--mut);background:var(--card);border:1px solid var(--rule);border-radius:4px;padding:0 5px;white-space:nowrap}
+blockquote{margin:1em 0;padding:8px 16px;border-left:4px solid var(--warn);background:var(--card)}code{background:var(--card);border:1px solid var(--rule);border-radius:4px;padding:0 4px;font-size:.9em}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:24px 0}.cards a{display:block;background:var(--card);border:1px solid var(--rule);border-top:5px solid var(--acc);border-radius:8px;padding:18px 20px;text-decoration:none;color:var(--ink)}
+.cards b{display:block;font-size:20px;color:var(--acc);margin-bottom:4px}.cards span{font-size:15px;color:var(--mut)}</style></head><body><header><div><a href="../index.html">首頁</a><a href="../wiki-site/index.html">Wiki</a><a href="../slides/index.html">簡報</a><a href="https://github.com/g167114005/xai-stroke-llm-wiki">GitHub</a></div></header><main><h1>Ingest 與維護紀錄</h1>
+<h2>2026-11-15</h2>
+<ul>
+<li>ingest <code>review</code>：建立 review 頁；依 review 建立 9 個觀念頁、7 個議題頁、3 個比較頁的骨架；更新 index。</li>
+<li>ingest <code>kuzan2026</code>（Kuzan et al.）：新增論文頁；加入 by-task、by-xai-paradigm；議題頁新增證據：gradcam-coarse-and-artifacts、explanation-validity-untested；更新 index。</li>
+<li>ingest <code>tuxunjiang2025</code>（Tuxunjiang et al.）：新增論文頁；加入 by-task、by-xai-paradigm；議題頁新增證據：gradcam-coarse-and-artifacts、explanation-validity-untested；更新 index。</li>
+<li>ingest <code>inamdar2026</code>（Inamdar et al.）：新增論文頁；加入 by-task、by-xai-paradigm；議題頁新增證據：explanation-validity-untested、automation-bias-and-uncertainty；更新 index。</li>
+<li>ingest <code>li2026</code>（Li et al.）：新增論文頁；加入 by-task、by-xai-paradigm；議題頁新增證據：shap-feature-dependence、validation-stage-discrimination；更新 index。</li>
+<li>ingest <code>huangh2026</code>（Huang H. et al.）：新增論文頁；加入 by-task、by-xai-paradigm；議題頁新增證據：validation-stage-discrimination、review-vs-original；更新 index。</li>
+<li>ingest <code>gerbasi2022</code>（Gerbasi et al.）：新增論文頁；加入 by-task、by-xai-paradigm；議題頁新增證據：shap-rank-vs-incremental-value；更新 index。</li>
+<li>ingest <code>huangl2025</code>（Huang L. et al.）：新增論文頁；加入 by-task、by-xai-paradigm；議題頁新增證據：validation-stage-discrimination、shap-feature-dependence；更新 index。</li>
+<li>ingest <code>cao2026</code>（Cao et al.）：新增論文頁；加入 by-task、by-xai-paradigm；議題頁新增證據：validation-stage-discrimination；更新 index。</li>
+<li>批次 ingest（8 篇）：</li>
+<li><code>gu2026</code>（Gu et al.）：新增論文頁、加入比較頁；議題頁新增證據：explanation-validity-untested。</li>
+<li><code>zatcepin2024</code>（Zatcepin et al.）：新增論文頁、加入比較頁；議題頁新增證據：explanation-validity-untested。</li>
+<li><code>hossain2025</code>（Hossain et al.）：新增論文頁、加入比較頁；議題頁新增證據：無。</li>
+<li><code>ahmedmm2026</code>（Ahmed M.M. et al.）：新增論文頁、加入比較頁；議題頁新增證據：無。</li>
+<li><code>tang2026</code>（Tang et al.）：新增論文頁、加入比較頁；議題頁新增證據：explanation-validity-untested。</li>
+<li><code>wangz2025</code>（Wang Z. et al.）：新增論文頁、加入比較頁；議題頁新增證據：無。</li>
+<li><code>lee2023</code>（Lee et al.）：新增論文頁、加入比較頁；議題頁新增證據：無。</li>
+<li><code>elsayed2025</code>（Elsayed et al.）：新增論文頁、加入比較頁；議題頁新增證據：無。</li>
+<li>批次 ingest（8 篇）：</li>
+<li><code>bacon2026</code>（Bacon et al.）：新增論文頁、加入比較頁；議題頁新增證據：無。</li>
+<li><code>ozkara2024</code>（Ozkara et al. (2024)）：新增論文頁、加入比較頁；議題頁新增證據：shap-feature-dependence。</li>
+<li><code>sakai2026</code>（Sakai et al.）：新增論文頁、加入比較頁；議題頁新增證據：無。</li>
+<li><code>wangm2023</code>（Wang M. et al.）：新增論文頁、加入比較頁；議題頁新增證據：無。</li>
+<li><code>zhangl2023</code>（Zhang L. et al.）：新增論文頁、加入比較頁；議題頁新增證據：無。</li>
+<li><code>yin2022</code>（Yin et al.）：新增論文頁、加入比較頁；議題頁新增證據：無。</li>
+<li><code>diaz2026</code>（Diaz et al.）：新增論文頁、加入比較頁；議題頁新增證據：無。</li>
+<li><code>leey2026</code>（Lee Y. et al.）：新增論文頁、加入比較頁；議題頁新增證據：無。</li>
+<li>批次 ingest（7 篇）：</li>
+<li><code>ahmedae2025</code>（Ahmed A.E. et al.）：新增論文頁、加入比較頁；議題頁新增證據：無。</li>
+<li><code>jabal2022</code>（Jabal et al.）：新增論文頁、加入比較頁；議題頁新增證據：無。</li>
+<li><code>wei2026</code>（Wei et al.）：新增論文頁、加入比較頁；議題頁新增證據：無。</li>
+<li><code>ozkara2023</code>（Ozkara et al. (2023)）：新增論文頁、加入比較頁；議題頁新增證據：shap-feature-dependence。</li>
+<li><code>liu2025</code>（Liu et al.）：新增論文頁、加入比較頁；議題頁新增證據：validation-stage-discrimination。</li>
+<li><code>zhao2026</code>（Zhao et al.）：新增論文頁、加入比較頁；議題頁新增證據：validation-stage-discrimination。</li>
+<li><code>hu2025</code>（Hu et al.）：新增論文頁、加入比較頁；議題頁新增證據：無。</li>
+</ul>
+<h2>2026-11-15　維護與已知限制</h2>
+<ul>
+<li>產出簡報 run-01（主題：SHAP 與 Grad-CAM 的方法學限制）；流程與退回紀錄見 <code>workflow/run-01/</code>。</li>
+<li><strong>閱讀深度的限制（未完全做到 AGENTS.md §7 的「讀全文」）</strong>：review 讀了第 1–5 節全文與第 6–7 節重點；31 篇 PDF 讀的是摘要頁，加上對「SHAP／Grad-CAM／外部驗證／校準／樣本數／AUC」的逐頁定點檢索，不是每一頁都精讀。wiki 上的數字都經 lint 回查到所標頁面，但 Methods 的細節（例如前處理、缺失值處理）沒有收進來。要加深時，請逐篇重新 ingest 並在這裡加一筆。</li>
+<li><strong>分類的限制</strong>：<code>by-xai-paradigm</code> 的逐篇分組、<code>by-task</code> 的「風險與病因」「其他」是本 wiki 自己歸的；review 的逐篇編碼在補充資料（Table S3、S6），不在 <code>raw/</code> 裡。哪六篇屬於 review 所說的「鄰近神經血管模型」也因此沒有標。</li>
+<li><strong>待人工確認</strong>：<code>review-vs-original</code> 登記 1 筆不一致（Huang H. et al. 的位置模型 AUC）。</li>
+</ul></main></body></html>

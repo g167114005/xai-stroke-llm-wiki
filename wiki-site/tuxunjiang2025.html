@@ -1,0 +1,45 @@
+<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Tuxunjiang et al.（2025）Cross-attention ViT 用多序列 MRI 判斷中風嚴重度</title><style>:root{--bg:#F6F3EC;--ink:#1A2331;--mut:#5A6475;--rule:#D8D2C5;--acc:#0E6B70;--warn:#B3432A;--card:#FFFDF8}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.75 "Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif}
+header{border-bottom:1px solid var(--rule);background:var(--card)}header div,main{max-width:860px;margin:0 auto;padding:14px 24px}
+header a{margin-right:18px;font-weight:600}main{padding-top:28px;padding-bottom:80px}a{color:var(--acc)}
+h1{font-size:30px;line-height:1.3;margin:.2em 0 .6em}h2{font-size:21px;margin:1.8em 0 .5em;padding-bottom:4px;border-bottom:2px solid var(--rule)}h3{font-size:18px;margin:1.4em 0 .3em}
+table{border-collapse:collapse;width:100%;font-size:15px;margin:1em 0;display:block;overflow-x:auto}th,td{border:1px solid var(--rule);padding:6px 10px;text-align:left;vertical-align:top}th{background:var(--card)}
+.meta{font-size:14px;color:var(--mut);background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:10px 16px;margin-bottom:8px}.meta b{color:var(--ink)}
+.cite{font:12.5px ui-monospace,Consolas,monospace;color:var(--mut);background:var(--card);border:1px solid var(--rule);border-radius:4px;padding:0 5px;white-space:nowrap}
+blockquote{margin:1em 0;padding:8px 16px;border-left:4px solid var(--warn);background:var(--card)}code{background:var(--card);border:1px solid var(--rule);border-radius:4px;padding:0 4px;font-size:.9em}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:24px 0}.cards a{display:block;background:var(--card);border:1px solid var(--rule);border-top:5px solid var(--acc);border-radius:8px;padding:18px 20px;text-decoration:none;color:var(--ink)}
+.cards b{display:block;font-size:20px;color:var(--acc);margin-bottom:4px}.cards span{font-size:15px;color:var(--mut)}</style></head><body><header><div><a href="../index.html">首頁</a><a href="../wiki-site/index.html">Wiki</a><a href="../slides/index.html">簡報</a><a href="https://github.com/g167114005/xai-stroke-llm-wiki">GitHub</a></div></header><main><div class="meta"><b>type</b> paper　<b>key</b> tuxunjiang2025　<b>year</b> 2025　<b>source_file</b> Prediction of NIHSS Scores and Acute Ischemic Stroke Severity Using a Cross-attention Vision Transformer Model with Multimodal MRI.pdf　<b>task</b> 偵測分類　<b>modality</b> 多序列 MRI（DWI、T1WI、T2WI、FLAIR）　<b>xai</b> Grad-CAM　<b>validation</b> 外部驗證（2 家中心）</div><h1>Tuxunjiang et al.（2025）Cross-attention ViT 用多序列 MRI 判斷中風嚴重度</h1>
+<h2>一句話</h2>
+<p>讓 AI 看好幾種 MRI 影像，判斷病人的神經缺損是「輕微」還是「中重度」。</p>
+<h2>研究設計</h2>
+<ul>
+<li>回溯收集 1227 位 AIS 病人，依 NIHSS 分成輕度（&lt; 5）與中重度（≥5）<span class="cite">tuxunjiang2025 p.1</span>。</li>
+<li>比較八個模型：臨床模型、radiomics 模型，以及不同融合方式的深度學習模型，深度學習都以 ViT 為基礎 <span class="cite">tuxunjiang2025 p.1</span>。</li>
+</ul>
+<h2>模型與結果</h2>
+<ul>
+<li>模型：Vision Transformer（cross-attention）</li>
+<li>最佳的 Model 8（以 DWI 為主、交叉融合其他序列）在測試集 AUC 0.914、ACC 0.830、特異度 0.818、敏感度 0.853 <span class="cite">tuxunjiang2025 p.1</span>。</li>
+<li>外部驗證：中心 2 與中心 3 的 AUC 為 0.910 與 0.912 <span class="cite">tuxunjiang2025 p.1</span>。</li>
+<li>次族群分析大多穩定，但 BMI 分組有顯著差異（p &lt; 0.001）<span class="cite">tuxunjiang2025 p.1</span>。</li>
+</ul>
+<h2>XAI 怎麼做</h2>
+<ul>
+<li>用 Grad-CAM 產生熱圖，顯示梗塞核心 (infarct core) 是對預測最關鍵的區域 <span class="cite">tuxunjiang2025 p.1</span>。</li>
+<li>方法說明在 <span class="cite">tuxunjiang2025 p.8</span>，熱圖在 <span class="cite">tuxunjiang2025 p.11</span>。</li>
+</ul>
+<h2>Review 的評論</h2>
+<ul>
+<li>Review 選為正文詳述的研究之一 <span class="cite">review §3</span>。</li>
+<li>Review 記載實際納入分析的是 1162 人（原文寫收集 1227 人，兩者是「收案」與「分析」的差別）<span class="cite">review §3.1</span> <span class="cite">tuxunjiang2025 p.1</span>。</li>
+<li>熱圖在梗塞核心的權重明顯高於周邊組織 <span class="cite">review §3.1</span>。</li>
+<li>外部資料上的解釋只做了質性檢視 <span class="cite">review §4.4</span>。</li>
+<li>偏誤風險 (risk of bias)：High。30 篇裡有 28 篇是 High，只有 Li 與 Huang H. 兩篇是 Unclear，沒有任何一篇是 Low <span class="cite">review §2</span>。</li>
+</ul>
+<h2>相關頁面</h2>
+<ul>
+<li>觀念：<a href="grad-cam.html">grad-cam</a>、<a href="stroke-terms.html">stroke-terms</a>、<a href="auc.html">auc</a>、<a href="radiomics.html">radiomics</a>、<a href="external-validation.html">external-validation</a></li>
+<li>議題：<a href="gradcam-coarse-and-artifacts.html">gradcam-coarse-and-artifacts</a>、<a href="explanation-validity-untested.html">explanation-validity-untested</a></li>
+<li>比較：<a href="by-task.html">by-task</a>、<a href="by-xai-paradigm.html">by-xai-paradigm</a></li>
+<li>裁判來源：<a href="review.html">review</a></li>
+</ul></main></body></html>

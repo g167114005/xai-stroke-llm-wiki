@@ -1,0 +1,40 @@
+<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Zhang L. et al.（2023）NCCT radiomics 預測接受傳統治療的 AIS 病人預後</title><style>:root{--bg:#F6F3EC;--ink:#1A2331;--mut:#5A6475;--rule:#D8D2C5;--acc:#0E6B70;--warn:#B3432A;--card:#FFFDF8}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.75 "Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif}
+header{border-bottom:1px solid var(--rule);background:var(--card)}header div,main{max-width:860px;margin:0 auto;padding:14px 24px}
+header a{margin-right:18px;font-weight:600}main{padding-top:28px;padding-bottom:80px}a{color:var(--acc)}
+h1{font-size:30px;line-height:1.3;margin:.2em 0 .6em}h2{font-size:21px;margin:1.8em 0 .5em;padding-bottom:4px;border-bottom:2px solid var(--rule)}h3{font-size:18px;margin:1.4em 0 .3em}
+table{border-collapse:collapse;width:100%;font-size:15px;margin:1em 0;display:block;overflow-x:auto}th,td{border:1px solid var(--rule);padding:6px 10px;text-align:left;vertical-align:top}th{background:var(--card)}
+.meta{font-size:14px;color:var(--mut);background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:10px 16px;margin-bottom:8px}.meta b{color:var(--ink)}
+.cite{font:12.5px ui-monospace,Consolas,monospace;color:var(--mut);background:var(--card);border:1px solid var(--rule);border-radius:4px;padding:0 5px;white-space:nowrap}
+blockquote{margin:1em 0;padding:8px 16px;border-left:4px solid var(--warn);background:var(--card)}code{background:var(--card);border:1px solid var(--rule);border-radius:4px;padding:0 4px;font-size:.9em}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:24px 0}.cards a{display:block;background:var(--card);border:1px solid var(--rule);border-top:5px solid var(--acc);border-radius:8px;padding:18px 20px;text-decoration:none;color:var(--ink)}
+.cards b{display:block;font-size:20px;color:var(--acc);margin-bottom:4px}.cards span{font-size:15px;color:var(--mut)}</style></head><body><header><div><a href="../index.html">首頁</a><a href="../wiki-site/index.html">Wiki</a><a href="../slides/index.html">簡報</a><a href="https://github.com/g167114005/xai-stroke-llm-wiki">GitHub</a></div></header><main><div class="meta"><b>type</b> paper　<b>key</b> zhangl2023　<b>year</b> 2023　<b>source_file</b> PIIS0720048X23002735.pdf　<b>task</b> 功能預後　<b>modality</b> NCCT　<b>xai</b> SHAP　<b>validation</b> 內部測試集（兩中心）</div><h1>Zhang L. et al.（2023）NCCT radiomics 預測接受傳統治療的 AIS 病人預後</h1>
+<h2>一句話</h2>
+<p>只用最基本、不打顯影劑的 CT，預測病人出院半年後的狀況。</p>
+<h2>研究設計</h2>
+<ul>
+<li>兩中心回溯性研究，240 位接受傳統治療的 AIS 病人 <span class="cite">zhangl2023 p.1</span>。</li>
+<li>從 NCCT 抽出 1454 個 texture 特徵 <span class="cite">zhangl2023 p.1</span>。</li>
+</ul>
+<h2>模型與結果</h2>
+<ul>
+<li>模型：SVM（fusion model）</li>
+<li>測試集 AUC：radiomics 模型 0.705、fusion 模型 0.857、臨床模型 0.643 <span class="cite">zhangl2023 p.1</span>。</li>
+<li>fusion 模型準確度 84.8%、敏感度 93.8% <span class="cite">zhangl2023 p.1</span>。</li>
+</ul>
+<h2>XAI 怎麼做</h2>
+<ul>
+<li>用 SHAP 分析各特徵的貢獻 <span class="cite">zhangl2023 p.4</span>，summary 圖在 <span class="cite">zhangl2023 p.5</span>。</li>
+</ul>
+<h2>Review 的評論</h2>
+<ul>
+<li>Review 把它放在未於正文詳述的 22 篇之中，但全文仍做了 PROBAST+AI 與 XAI 評讀 <span class="cite">review §2</span>。</li>
+<li>偏誤風險 (risk of bias)：High。30 篇裡有 28 篇是 High，只有 Li 與 Huang H. 兩篇是 Unclear，沒有任何一篇是 Low <span class="cite">review §2</span>。</li>
+</ul>
+<h2>相關頁面</h2>
+<ul>
+<li>觀念：<a href="shap.html">shap</a>、<a href="stroke-terms.html">stroke-terms</a>、<a href="auc.html">auc</a>、<a href="radiomics.html">radiomics</a></li>
+<li>議題：（無特別對應的議題頁）</li>
+<li>比較：<a href="by-task.html">by-task</a>、<a href="by-xai-paradigm.html">by-xai-paradigm</a></li>
+<li>裁判來源：<a href="review.html">review</a></li>
+</ul></main></body></html>

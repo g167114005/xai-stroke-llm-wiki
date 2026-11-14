@@ -1,0 +1,22 @@
+<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AUC（ROC 曲線下面積）</title><style>:root{--bg:#F6F3EC;--ink:#1A2331;--mut:#5A6475;--rule:#D8D2C5;--acc:#0E6B70;--warn:#B3432A;--card:#FFFDF8}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.75 "Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif}
+header{border-bottom:1px solid var(--rule);background:var(--card)}header div,main{max-width:860px;margin:0 auto;padding:14px 24px}
+header a{margin-right:18px;font-weight:600}main{padding-top:28px;padding-bottom:80px}a{color:var(--acc)}
+h1{font-size:30px;line-height:1.3;margin:.2em 0 .6em}h2{font-size:21px;margin:1.8em 0 .5em;padding-bottom:4px;border-bottom:2px solid var(--rule)}h3{font-size:18px;margin:1.4em 0 .3em}
+table{border-collapse:collapse;width:100%;font-size:15px;margin:1em 0;display:block;overflow-x:auto}th,td{border:1px solid var(--rule);padding:6px 10px;text-align:left;vertical-align:top}th{background:var(--card)}
+.meta{font-size:14px;color:var(--mut);background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:10px 16px;margin-bottom:8px}.meta b{color:var(--ink)}
+.cite{font:12.5px ui-monospace,Consolas,monospace;color:var(--mut);background:var(--card);border:1px solid var(--rule);border-radius:4px;padding:0 5px;white-space:nowrap}
+blockquote{margin:1em 0;padding:8px 16px;border-left:4px solid var(--warn);background:var(--card)}code{background:var(--card);border:1px solid var(--rule);border-radius:4px;padding:0 4px;font-size:.9em}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:24px 0}.cards a{display:block;background:var(--card);border:1px solid var(--rule);border-top:5px solid var(--acc);border-radius:8px;padding:18px 20px;text-decoration:none;color:var(--ink)}
+.cards b{display:block;font-size:20px;color:var(--acc);margin-bottom:4px}.cards span{font-size:15px;color:var(--mut)}</style></head><body><header><div><a href="../index.html">首頁</a><a href="../wiki-site/index.html">Wiki</a><a href="../slides/index.html">簡報</a><a href="https://github.com/g167114005/xai-stroke-llm-wiki">GitHub</a></div></header><main><div class="meta"><b>type</b> concept</div><h1>AUC（ROC 曲線下面積）</h1>
+<h2>白話解釋</h2>
+<p>AUC 是衡量「模型分不分得出兩群人」的分數，介於 0 與 1 之間。隨便抽一個有病的與一個沒病的，模型給有病的那位較高分數的機率，就是 AUC。亂猜大約是一半，越接近 1 越好。<br />
+要注意：AUC 高只代表「排序排得對」，不代表模型給的機率準不準（那是 <a href="calibration.html">calibration</a>），也不代表模型的解釋可信。</p>
+<h2>在中風影像怎麼用</h2>
+<ul>
+<li>Review 指出近年的中風影像模型 AUC 常常超過 0.85 到 0.90 <span class="cite">review §1</span>。</li>
+<li>同一個模型在自家資料與別家醫院資料上的 AUC 可能不同，見 <a href="internal-vs-external.html">internal-vs-external</a>。</li>
+<li>Review 強調：外部資料上的 AUC 不能當成「解釋也能重現」的證據 <span class="cite">review §4.4</span>。</li>
+</ul>
+<h2>相關頁面</h2>
+<p><a href="calibration.html">calibration</a>、<a href="external-validation.html">external-validation</a>、<a href="internal-vs-external.html">internal-vs-external</a>、<a href="validation-stage-discrimination.html">validation-stage-discrimination</a></p></main></body></html>

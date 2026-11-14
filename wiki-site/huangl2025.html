@@ -1,0 +1,44 @@
+<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Huang L. et al.（2025）以 ASPECTS 分區做 CT radiomics 預測惡性腦水腫</title><style>:root{--bg:#F6F3EC;--ink:#1A2331;--mut:#5A6475;--rule:#D8D2C5;--acc:#0E6B70;--warn:#B3432A;--card:#FFFDF8}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.75 "Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif}
+header{border-bottom:1px solid var(--rule);background:var(--card)}header div,main{max-width:860px;margin:0 auto;padding:14px 24px}
+header a{margin-right:18px;font-weight:600}main{padding-top:28px;padding-bottom:80px}a{color:var(--acc)}
+h1{font-size:30px;line-height:1.3;margin:.2em 0 .6em}h2{font-size:21px;margin:1.8em 0 .5em;padding-bottom:4px;border-bottom:2px solid var(--rule)}h3{font-size:18px;margin:1.4em 0 .3em}
+table{border-collapse:collapse;width:100%;font-size:15px;margin:1em 0;display:block;overflow-x:auto}th,td{border:1px solid var(--rule);padding:6px 10px;text-align:left;vertical-align:top}th{background:var(--card)}
+.meta{font-size:14px;color:var(--mut);background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:10px 16px;margin-bottom:8px}.meta b{color:var(--ink)}
+.cite{font:12.5px ui-monospace,Consolas,monospace;color:var(--mut);background:var(--card);border:1px solid var(--rule);border-radius:4px;padding:0 5px;white-space:nowrap}
+blockquote{margin:1em 0;padding:8px 16px;border-left:4px solid var(--warn);background:var(--card)}code{background:var(--card);border:1px solid var(--rule);border-radius:4px;padding:0 4px;font-size:.9em}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:24px 0}.cards a{display:block;background:var(--card);border:1px solid var(--rule);border-top:5px solid var(--acc);border-radius:8px;padding:18px 20px;text-decoration:none;color:var(--ink)}
+.cards b{display:block;font-size:20px;color:var(--acc);margin-bottom:4px}.cards span{font-size:15px;color:var(--mut)}</style></head><body><header><div><a href="../index.html">首頁</a><a href="../wiki-site/index.html">Wiki</a><a href="../slides/index.html">簡報</a><a href="https://github.com/g167114005/xai-stroke-llm-wiki">GitHub</a></div></header><main><div class="meta"><b>type</b> paper　<b>key</b> huangl2025　<b>year</b> 2025　<b>source_file</b> Development and validation of a radiomics model based on the ASPECTS framework using CT imaging for predicting malignant cerebral edema.pdf　<b>task</b> 併發症與無效再通　<b>modality</b> NCCT＋CTA　<b>xai</b> SHAP　<b>validation</b> 外部驗證（2 家中心）</div><h1>Huang L. et al.（2025）以 ASPECTS 分區做 CT radiomics 預測惡性腦水腫</h1>
+<h2>一句話</h2>
+<p>不用醫師手動圈出梗塞範圍，直接從 CT 的固定分區抽特徵，預測病人會不會發生危險的腦水腫。</p>
+<h2>研究設計</h2>
+<ul>
+<li>多中心回溯性研究，5 家中風中心共 708 位病人 <span class="cite">huangl2025 p.1</span>。</li>
+<li>3 家中心的資料以 7:3 分成訓練與內部驗證，其餘 2 家做外部驗證 <span class="cite">huangl2025 p.3</span>。</li>
+<li>development 506 人、外部驗證 202 人 <span class="cite">huangl2025 p.4</span>。</li>
+</ul>
+<h2>模型與結果</h2>
+<ul>
+<li>模型：臨床＋radiomics 融合模型</li>
+<li>融合模型 AUC：訓練 0.91、內部驗證 0.78（95 %CI：0.70–0.87）、外部驗證 0.88（95 %CI：0.82–0.94）<span class="cite">huangl2025 p.1</span>。</li>
+<li>外部驗證中，只用臨床變項的模型 AUC 為 0.71 <span class="cite">huangl2025 p.1</span>。</li>
+<li>在外部資料上，各模型的校準 (calibration) 普遍變差 <span class="cite">huangl2025 p.5</span>。</li>
+</ul>
+<h2>XAI 怎麼做</h2>
+<ul>
+<li>用 SHAP 解釋特徵貢獻；最重要的包括 ASPECTS 與 NIHSS <span class="cite">huangl2025 p.1</span>，review 另列出多期側枝循環分數 (CS) <span class="cite">review §3.3</span>。</li>
+</ul>
+<h2>Review 的評論</h2>
+<ul>
+<li>Review 選為正文詳述的研究之一 <span class="cite">review §3</span>。</li>
+<li>直接從 ASPECTS 分區抽特徵，避開了「手動圈梗塞」這個臨床瓶頸 <span class="cite">review §3.3</span>。</li>
+<li>內部 0.78 → 外部 0.88（Δ = +0.100）<span class="cite">review §4.3</span>。</li>
+<li>偏誤風險 (risk of bias)：High。30 篇裡有 28 篇是 High，只有 Li 與 Huang H. 兩篇是 Unclear，沒有任何一篇是 Low <span class="cite">review §2</span>。</li>
+</ul>
+<h2>相關頁面</h2>
+<ul>
+<li>觀念：<a href="shap.html">shap</a>、<a href="stroke-terms.html">stroke-terms</a>、<a href="auc.html">auc</a>、<a href="radiomics.html">radiomics</a>、<a href="external-validation.html">external-validation</a></li>
+<li>議題：<a href="shap-feature-dependence.html">shap-feature-dependence</a>、<a href="validation-stage-discrimination.html">validation-stage-discrimination</a></li>
+<li>比較：<a href="by-task.html">by-task</a>、<a href="by-xai-paradigm.html">by-xai-paradigm</a></li>
+<li>裁判來源：<a href="review.html">review</a></li>
+</ul></main></body></html>

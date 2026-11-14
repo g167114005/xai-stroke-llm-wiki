@@ -1,0 +1,37 @@
+<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>解釋本身幾乎沒有被驗證過</title><style>:root{--bg:#F6F3EC;--ink:#1A2331;--mut:#5A6475;--rule:#D8D2C5;--acc:#0E6B70;--warn:#B3432A;--card:#FFFDF8}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.75 "Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif}
+header{border-bottom:1px solid var(--rule);background:var(--card)}header div,main{max-width:860px;margin:0 auto;padding:14px 24px}
+header a{margin-right:18px;font-weight:600}main{padding-top:28px;padding-bottom:80px}a{color:var(--acc)}
+h1{font-size:30px;line-height:1.3;margin:.2em 0 .6em}h2{font-size:21px;margin:1.8em 0 .5em;padding-bottom:4px;border-bottom:2px solid var(--rule)}h3{font-size:18px;margin:1.4em 0 .3em}
+table{border-collapse:collapse;width:100%;font-size:15px;margin:1em 0;display:block;overflow-x:auto}th,td{border:1px solid var(--rule);padding:6px 10px;text-align:left;vertical-align:top}th{background:var(--card)}
+.meta{font-size:14px;color:var(--mut);background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:10px 16px;margin-bottom:8px}.meta b{color:var(--ink)}
+.cite{font:12.5px ui-monospace,Consolas,monospace;color:var(--mut);background:var(--card);border:1px solid var(--rule);border-radius:4px;padding:0 5px;white-space:nowrap}
+blockquote{margin:1em 0;padding:8px 16px;border-left:4px solid var(--warn);background:var(--card)}code{background:var(--card);border:1px solid var(--rule);border-radius:4px;padding:0 4px;font-size:.9em}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:24px 0}.cards a{display:block;background:var(--card);border:1px solid var(--rule);border-top:5px solid var(--acc);border-radius:8px;padding:18px 20px;text-decoration:none;color:var(--ink)}
+.cards b{display:block;font-size:20px;color:var(--acc);margin-bottom:4px}.cards span{font-size:15px;color:var(--mut)}</style></head><body><header><div><a href="../index.html">首頁</a><a href="../wiki-site/index.html">Wiki</a><a href="../slides/index.html">簡報</a><a href="https://github.com/g167114005/xai-stroke-llm-wiki">GitHub</a></div></header><main><div class="meta"><b>type</b> issue</div><h1>解釋本身幾乎沒有被驗證過</h1>
+<h2>問題是什麼</h2>
+<p>多數研究的做法是：模型訓練好 → 畫出 SHAP 圖或熱圖 → 挑幾張看起來合理的放進論文。但「解釋對不對」本身需要檢驗，例如：<br />
+- <strong>fidelity（忠實度）</strong>：把解釋說重要的部分拿掉，預測真的會變嗎？<br />
+- <strong>stability（穩定度）</strong>：換個隨機種子、換一折資料，解釋還一樣嗎？<br />
+- <strong>localization（定位）</strong>：熱圖與醫師標的病灶重疊多少？<br />
+- <strong>外部資料</strong>：換一家醫院，解釋還成立嗎？</p>
+<h2>證據</h2>
+<ul>
+<li><a href="kuzan2026.html">kuzan2026</a>：外部資料上的解釋只做了質性檢視 <span class="cite">review §4.4</span>。</li>
+<li><a href="tuxunjiang2025.html">tuxunjiang2025</a>：外部資料上的解釋只做了質性檢視 <span class="cite">review §4.4</span>。</li>
+<li><a href="inamdar2026.html">inamdar2026</a>：唯一做量化 fidelity 檢驗的研究；穩定性只有部分證據 <span class="cite">review §4.4</span>。</li>
+<li><a href="gu2026.html">gu2026</a>：歸因穩定性只有部分證據 <span class="cite">review §4.4</span>。</li>
+<li><a href="zatcepin2024.html">zatcepin2024</a>：fidelity 只有間接證據 <span class="cite">review §4.4</span>。</li>
+<li><a href="tang2026.html">tang2026</a>：SHAP 只在 Methods 提到、沒有結果 <span class="cite">review §4.4</span>。</li>
+</ul>
+<h2>Review 的立場</h2>
+<ul>
+<li>20 篇 SHAP 研究沒有一篇交代 background/reference distribution <span class="cite">review §4.4</span>。</li>
+<li>10 篇影像顯著圖研究的定位全部只做質性評估 <span class="cite">review §4.4</span>。</li>
+<li>量化 fidelity 檢驗只有一篇；在外部資料上檢視解釋的只有兩篇，且都是質性的 <span class="cite">review §4.4</span>。</li>
+<li>30 篇中有 10 篇（33.3%）的解釋性主張被評為 overstated：影像顯著圖 10 篇中四篇、SHAP 20 篇中六篇 <span class="cite">review §4.4</span>。</li>
+<li>沒報告的面向記為 NR／Unclear，不代表確定沒做；外部的模型 AUC 也不是解釋能重現的證據 <span class="cite">review §4.4</span>。</li>
+<li>評分者對這些面向的一致性本身也不高（例如解釋穩定度 κ = −0.10），顯示這類判斷需要詮釋 <span class="cite">review §2</span>。</li>
+</ul>
+<h2>相關頁面</h2>
+<p><a href="shap.html">shap</a>、<a href="grad-cam.html">grad-cam</a>、<a href="probast-ai.html">probast-ai</a>、<a href="by-xai-paradigm.html">by-xai-paradigm</a>、<a href="inamdar2026.html">inamdar2026</a></p></main></body></html>

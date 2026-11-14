@@ -11,6 +11,14 @@
 | **產生 HTML**：設計 Graph 或 Loop 的 workflow，生成簡報 | `slides/index.html`（13 頁，← → 換頁） | Graph 規格 `workflow/GRAPH.md`；執行紀錄 `workflow/run-01/` |
 | **反思** | `docs/反思.md`（草稿，請改成自己的話） | — |
 
+## 線上版本
+- 首頁：https://g167114005.github.io/xai-stroke-llm-wiki/
+- Wiki：https://g167114005.github.io/xai-stroke-llm-wiki/wiki-site/index.html
+- 簡報：https://g167114005.github.io/xai-stroke-llm-wiki/slides/index.html
+- 繳交內文：`docs/繳交內容.md`；截圖：`screenshots/`
+
+`wiki-site/` 與 `index.html` 由 `python tools/build_site.py` 從 `wiki/` 產生，請勿手改。
+
 ## 建議的截圖
 1. `docs/01_訪談紀錄.md`（先討論）
 2. `AGENTS.md` 第 4、5 節（出處規則、以 review 為準）

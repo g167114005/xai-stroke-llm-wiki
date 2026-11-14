@@ -1,0 +1,53 @@
+<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Review（Cheng et al., MDPI Diagnostics，已接受，校樣）</title><style>:root{--bg:#F6F3EC;--ink:#1A2331;--mut:#5A6475;--rule:#D8D2C5;--acc:#0E6B70;--warn:#B3432A;--card:#FFFDF8}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.75 "Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif}
+header{border-bottom:1px solid var(--rule);background:var(--card)}header div,main{max-width:860px;margin:0 auto;padding:14px 24px}
+header a{margin-right:18px;font-weight:600}main{padding-top:28px;padding-bottom:80px}a{color:var(--acc)}
+h1{font-size:30px;line-height:1.3;margin:.2em 0 .6em}h2{font-size:21px;margin:1.8em 0 .5em;padding-bottom:4px;border-bottom:2px solid var(--rule)}h3{font-size:18px;margin:1.4em 0 .3em}
+table{border-collapse:collapse;width:100%;font-size:15px;margin:1em 0;display:block;overflow-x:auto}th,td{border:1px solid var(--rule);padding:6px 10px;text-align:left;vertical-align:top}th{background:var(--card)}
+.meta{font-size:14px;color:var(--mut);background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:10px 16px;margin-bottom:8px}.meta b{color:var(--ink)}
+.cite{font:12.5px ui-monospace,Consolas,monospace;color:var(--mut);background:var(--card);border:1px solid var(--rule);border-radius:4px;padding:0 5px;white-space:nowrap}
+blockquote{margin:1em 0;padding:8px 16px;border-left:4px solid var(--warn);background:var(--card)}code{background:var(--card);border:1px solid var(--rule);border-radius:4px;padding:0 4px;font-size:.9em}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:24px 0}.cards a{display:block;background:var(--card);border:1px solid var(--rule);border-top:5px solid var(--acc);border-radius:8px;padding:18px 20px;text-decoration:none;color:var(--ink)}
+.cards b{display:block;font-size:20px;color:var(--acc);margin-bottom:4px}.cards span{font-size:15px;color:var(--mut)}</style></head><body><header><div><a href="../index.html">首頁</a><a href="../wiki-site/index.html">Wiki</a><a href="../slides/index.html">簡報</a><a href="https://github.com/g167114005/xai-stroke-llm-wiki">GitHub</a></div></header><main><div class="meta"><b>type</b> paper　<b>key</b> review　<b>year</b> 2026　<b>source_file</b> diagnostics-4566489-proof.docx　<b>task</b> 回顧與方法學評讀　<b>modality</b> NCCT、CTA、DWI 等　<b>xai</b> SHAP、Grad-CAM　<b>validation</b> 不適用（回顧文章）</div><h1>Review（Cheng et al., MDPI Diagnostics，已接受，校樣）</h1>
+<blockquote>
+<p>這是本 wiki 的「裁判」來源：其他論文頁與它不一致時，依 AGENTS.md §5 採它的說法。也因此要特別小心，見 <a href="review-vs-original.html">review-vs-original</a>。</p>
+</blockquote>
+<h2>一句話</h2>
+<p>把「用 AI 看中風影像、又附上解釋圖」的研究一篇一篇拿出來檢查：模型本身可不可靠？解釋圖可不可信？結論是兩邊都還有很大的問題。</p>
+<h2>研究設計</h2>
+<ul>
+<li>資料庫只查 PubMed/MEDLINE，範圍 1 January 2021 到 15 August 2026；作者明說這不是 PRISMA 系統性回顧，也沒有事先註冊 <span class="cite">review §2</span>。</li>
+<li>找到 34 筆；初篩排除 2 筆、2 筆拿不到全文，最後評讀 30 篇原始研究（24 篇急性 AIS 核心研究＋六篇鄰近的神經血管模型）<span class="cite">review §2</span>。</li>
+<li>其中 8 篇在正文詳述，其餘 22 篇放在補充資料，但全部都做了評讀 <span class="cite">review §2</span>。</li>
+<li>兩套評讀分開做：預測模型的偏誤風險用 <a href="probast-ai.html">probast-ai</a>；解釋本身用八個面向的 XAI 評讀 <span class="cite">review §2</span>。</li>
+<li>三位醫師各自獨立評分，通訊作者只負責仲裁 <span class="cite">review §2</span>。</li>
+</ul>
+<h2>模型與結果</h2>
+<ul>
+<li>整體偏誤風險：High 28 篇（93.3%）、Unclear 兩篇（6.7%，Li et al. 與 Huang H. et al.），沒有一篇是 Low <span class="cite">review §2</span>。</li>
+<li>High 主要來自分析領域（Domain 4：26/30，86.7%）<span class="cite">review §2</span>。</li>
+<li>適用性 (applicability) 有高度疑慮的有 19 篇（63.3%）<span class="cite">review §2</span>。</li>
+<li>仲裁前三位評分者的一致性偏低（整體 RoB κ = 0.084），但三人完全一致的研究占 76.7%（23/30）；作者用 kappa paradox 解釋這個落差 <span class="cite">review §2</span>。</li>
+<li>8 篇正文詳述的研究裡，只有四篇報告了 calibration <span class="cite">review §5.4</span>。</li>
+</ul>
+<h2>XAI 怎麼做</h2>
+<ul>
+<li>依主要的解釋方式分兩群：影像顯著圖（Grad-CAM 類，n = 10）與特徵歸因（SHAP，n = 20）<span class="cite">review §4.4</span>。</li>
+<li>20 篇 SHAP 研究沒有任何一篇交代 background/reference distribution <span class="cite">review §4.4</span>。</li>
+<li>10 篇影像顯著圖研究的定位全都只做質性評估（用眼睛看代表性熱圖）<span class="cite">review §4.4</span>。</li>
+<li>只有一篇（Inamdar et al.）做了量化的解釋 fidelity 檢驗 <span class="cite">review §4.4</span>。</li>
+<li>有把解釋拿到外部資料檢視的只有兩篇，而且都是質性的 <span class="cite">review §4.4</span>。</li>
+<li>30 篇中有 10 篇（33.3%）的解釋性主張被評為 overstated <span class="cite">review §4.4</span>。</li>
+</ul>
+<h2>Review 的評論</h2>
+<ul>
+<li>結論：Grad-CAM 熱圖與 SHAP 排名可以輔助解讀，但「看起來合理」加上「AUC 很高」，不能證明解釋是忠實的，更不能證明因果 <span class="cite">review §7</span>。</li>
+<li>作者自己列的限制：只查一個資料庫、只收英文文獻 <span class="cite">review §2</span>；評分者間一致性偏低，不能排除評分者或仲裁者門檻的共同影響 <span class="cite">review §5.4</span>。</li>
+<li>撰寫過程使用了大型語言模型協助摘要、抽取與統計計算，並由作者對照全文稽核 <span class="cite">review §2</span>。</li>
+</ul>
+<h2>相關頁面</h2>
+<ul>
+<li>觀念：<a href="shap.html">shap</a>、<a href="grad-cam.html">grad-cam</a>、<a href="probast-ai.html">probast-ai</a>、<a href="uncertainty-quantification.html">uncertainty-quantification</a>、<a href="external-validation.html">external-validation</a>、<a href="calibration.html">calibration</a>、<a href="stroke-terms.html">stroke-terms</a></li>
+<li>議題：<a href="shap-feature-dependence.html">shap-feature-dependence</a>、<a href="shap-rank-vs-incremental-value.html">shap-rank-vs-incremental-value</a>、<a href="gradcam-coarse-and-artifacts.html">gradcam-coarse-and-artifacts</a>、<a href="validation-stage-discrimination.html">validation-stage-discrimination</a>、<a href="explanation-validity-untested.html">explanation-validity-untested</a>、<a href="automation-bias-and-uncertainty.html">automation-bias-and-uncertainty</a>、<a href="review-vs-original.html">review-vs-original</a></li>
+<li>比較：<a href="by-task.html">by-task</a>、<a href="by-xai-paradigm.html">by-xai-paradigm</a>、<a href="internal-vs-external.html">internal-vs-external</a></li>
+</ul></main></body></html>

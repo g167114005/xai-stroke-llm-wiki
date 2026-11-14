@@ -1,0 +1,89 @@
+<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>內部驗證 vs 外部驗證的 AUC</title><style>:root{--bg:#F6F3EC;--ink:#1A2331;--mut:#5A6475;--rule:#D8D2C5;--acc:#0E6B70;--warn:#B3432A;--card:#FFFDF8}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.75 "Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif}
+header{border-bottom:1px solid var(--rule);background:var(--card)}header div,main{max-width:860px;margin:0 auto;padding:14px 24px}
+header a{margin-right:18px;font-weight:600}main{padding-top:28px;padding-bottom:80px}a{color:var(--acc)}
+h1{font-size:30px;line-height:1.3;margin:.2em 0 .6em}h2{font-size:21px;margin:1.8em 0 .5em;padding-bottom:4px;border-bottom:2px solid var(--rule)}h3{font-size:18px;margin:1.4em 0 .3em}
+table{border-collapse:collapse;width:100%;font-size:15px;margin:1em 0;display:block;overflow-x:auto}th,td{border:1px solid var(--rule);padding:6px 10px;text-align:left;vertical-align:top}th{background:var(--card)}
+.meta{font-size:14px;color:var(--mut);background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:10px 16px;margin-bottom:8px}.meta b{color:var(--ink)}
+.cite{font:12.5px ui-monospace,Consolas,monospace;color:var(--mut);background:var(--card);border:1px solid var(--rule);border-radius:4px;padding:0 5px;white-space:nowrap}
+blockquote{margin:1em 0;padding:8px 16px;border-left:4px solid var(--warn);background:var(--card)}code{background:var(--card);border:1px solid var(--rule);border-radius:4px;padding:0 4px;font-size:.9em}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:24px 0}.cards a{display:block;background:var(--card);border:1px solid var(--rule);border-top:5px solid var(--acc);border-radius:8px;padding:18px 20px;text-decoration:none;color:var(--ink)}
+.cards b{display:block;font-size:20px;color:var(--acc);margin-bottom:4px}.cards span{font-size:15px;color:var(--mut)}</style></head><body><header><div><a href="../index.html">首頁</a><a href="../wiki-site/index.html">Wiki</a><a href="../slides/index.html">簡報</a><a href="https://github.com/g167114005/xai-stroke-llm-wiki">GitHub</a></div></header><main><div class="meta"><b>type</b> comparison</div><h1>內部驗證 vs 外部驗證的 AUC</h1>
+<h2>對照表</h2>
+<table>
+<thead>
+<tr>
+<th>論文</th>
+<th>數字來源</th>
+<th>前一階段 AUC</th>
+<th>外部（或後一階段）AUC</th>
+<th>出處</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="cao2026.html">cao2026</a></td>
+<td>review 配對</td>
+<td>0.918</td>
+<td>0.755</td>
+<td><span class="cite">review §4.3</span></td>
+</tr>
+<tr>
+<td><a href="li2026.html">li2026</a></td>
+<td>review 配對</td>
+<td>0.84</td>
+<td>0.86</td>
+<td><span class="cite">review §4.3</span></td>
+</tr>
+<tr>
+<td><a href="huangl2025.html">huangl2025</a></td>
+<td>review 配對</td>
+<td>0.78</td>
+<td>0.88</td>
+<td><span class="cite">review §4.3</span></td>
+</tr>
+<tr>
+<td><a href="huangh2026.html">huangh2026</a></td>
+<td>review（development→外部，非配對）</td>
+<td>0.894</td>
+<td>0.874</td>
+<td><span class="cite">review §4.3</span></td>
+</tr>
+<tr>
+<td><a href="kuzan2026.html">kuzan2026</a></td>
+<td>原文</td>
+<td>1.000</td>
+<td>0.987、0.986</td>
+<td><span class="cite">kuzan2026 p.1</span></td>
+</tr>
+<tr>
+<td><a href="tuxunjiang2025.html">tuxunjiang2025</a></td>
+<td>原文（測試集→外部）</td>
+<td>0.914</td>
+<td>0.910、0.912</td>
+<td><span class="cite">tuxunjiang2025 p.1</span></td>
+</tr>
+<tr>
+<td><a href="zhao2026.html">zhao2026</a></td>
+<td>原文（內部測試→外部）</td>
+<td>0.847</td>
+<td>0.856、0.876</td>
+<td><span class="cite">zhao2026 p.2</span></td>
+</tr>
+<tr>
+<td><a href="gu2026.html">gu2026</a></td>
+<td>原文（訓練→驗證）</td>
+<td>0.872</td>
+<td>0.842</td>
+<td><span class="cite">gu2026 p.1</span></td>
+</tr>
+</tbody>
+</table>
+<h2>怎麼讀這張表</h2>
+<ul>
+<li>「review 配對」是 review 認定的內部驗證對獨立外部驗證配對；其他列的兩個階段不一定是這種配對，括號裡寫明比的是什麼 <span class="cite">review §4.3</span>。</li>
+<li>Review 不計算平均下降幅度；這張表要看的是「各研究不一樣」，不是「平均掉多少」<span class="cite">review §4.3</span>。</li>
+<li>觀念見 <a href="external-validation.html">external-validation</a> 與 <a href="auc.html">auc</a>；討論見 <a href="validation-stage-discrimination.html">validation-stage-discrimination</a>。</li>
+</ul>
+<h2>相關頁面</h2>
+<p><a href="validation-stage-discrimination.html">validation-stage-discrimination</a>、<a href="external-validation.html">external-validation</a>、<a href="auc.html">auc</a>、<a href="by-task.html">by-task</a></p></main></body></html>

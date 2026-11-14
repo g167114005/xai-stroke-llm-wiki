@@ -1,0 +1,92 @@
+<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>目錄</title><style>:root{--bg:#F6F3EC;--ink:#1A2331;--mut:#5A6475;--rule:#D8D2C5;--acc:#0E6B70;--warn:#B3432A;--card:#FFFDF8}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.75 "Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif}
+header{border-bottom:1px solid var(--rule);background:var(--card)}header div,main{max-width:860px;margin:0 auto;padding:14px 24px}
+header a{margin-right:18px;font-weight:600}main{padding-top:28px;padding-bottom:80px}a{color:var(--acc)}
+h1{font-size:30px;line-height:1.3;margin:.2em 0 .6em}h2{font-size:21px;margin:1.8em 0 .5em;padding-bottom:4px;border-bottom:2px solid var(--rule)}h3{font-size:18px;margin:1.4em 0 .3em}
+table{border-collapse:collapse;width:100%;font-size:15px;margin:1em 0;display:block;overflow-x:auto}th,td{border:1px solid var(--rule);padding:6px 10px;text-align:left;vertical-align:top}th{background:var(--card)}
+.meta{font-size:14px;color:var(--mut);background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:10px 16px;margin-bottom:8px}.meta b{color:var(--ink)}
+.cite{font:12.5px ui-monospace,Consolas,monospace;color:var(--mut);background:var(--card);border:1px solid var(--rule);border-radius:4px;padding:0 5px;white-space:nowrap}
+blockquote{margin:1em 0;padding:8px 16px;border-left:4px solid var(--warn);background:var(--card)}code{background:var(--card);border:1px solid var(--rule);border-radius:4px;padding:0 4px;font-size:.9em}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:24px 0}.cards a{display:block;background:var(--card);border:1px solid var(--rule);border-top:5px solid var(--acc);border-radius:8px;padding:18px 20px;text-decoration:none;color:var(--ink)}
+.cards b{display:block;font-size:20px;color:var(--acc);margin-bottom:4px}.cards span{font-size:15px;color:var(--mut)}</style></head><body><header><div><a href="../index.html">首頁</a><a href="../wiki-site/index.html">Wiki</a><a href="../slides/index.html">簡報</a><a href="https://github.com/g167114005/xai-stroke-llm-wiki">GitHub</a></div></header><main><h1>目錄</h1>
+<p>主題：可解釋 AI（SHAP、Grad-CAM）用在急性缺血性中風神經影像。規則見專案根目錄的 <code>AGENTS.md</code>。</p>
+<p>第一次來：先讀 <a href="stroke-terms.html">stroke-terms</a> → <a href="shap.html">shap</a> → <a href="grad-cam.html">grad-cam</a> → <a href="review.html">review</a>。</p>
+<h2>裁判來源</h2>
+<ul>
+<li><a href="review.html">review</a>：我們的 critical review（MDPI Diagnostics，已接受）</li>
+</ul>
+<h2>觀念頁</h2>
+<ul>
+<li><a href="shap.html">shap</a>：SHAP（Shapley Additive exPlanations）</li>
+<li><a href="grad-cam.html">grad-cam</a>：Grad-CAM（Gradient-weighted Class Activation Mapping）</li>
+<li><a href="radiomics.html">radiomics</a>：Radiomics（影像組學）</li>
+<li><a href="auc.html">auc</a>：AUC（ROC 曲線下面積）</li>
+<li><a href="external-validation.html">external-validation</a>：外部驗證（external validation）</li>
+<li><a href="calibration.html">calibration</a>：校準（calibration）</li>
+<li><a href="probast-ai.html">probast-ai</a>：PROBAST+AI（預測模型偏誤風險評估工具）</li>
+<li><a href="uncertainty-quantification.html">uncertainty-quantification</a>：不確定性量化（uncertainty quantification, UQ）</li>
+<li><a href="stroke-terms.html">stroke-terms</a>：中風影像常見名詞（給非醫療背景的讀者）</li>
+</ul>
+<h2>議題頁</h2>
+<ul>
+<li><a href="shap-feature-dependence.html">shap-feature-dependence</a>：SHAP 遇到彼此相關的特徵：排名會跟著算法設定變</li>
+<li><a href="shap-rank-vs-incremental-value.html">shap-rank-vs-incremental-value</a>：SHAP 排名高，不等於有額外的預測價值</li>
+<li><a href="gradcam-coarse-and-artifacts.html">gradcam-coarse-and-artifacts</a>：Grad-CAM 的三個弱點：解析度粗、怕假影、看不到非影像資料</li>
+<li><a href="validation-stage-discrimination.html">validation-stage-discrimination</a>：換一家醫院，AUC 會怎麼變？結果並不一致</li>
+<li><a href="explanation-validity-untested.html">explanation-validity-untested</a>：解釋本身幾乎沒有被驗證過</li>
+<li><a href="automation-bias-and-uncertainty.html">automation-bias-and-uncertainty</a>：熱圖永遠很肯定：自動化偏誤與不確定性</li>
+<li><a href="review-vs-original.html">review-vs-original</a>：Review 與原始論文不一致的地方（依規則採 review，但全部列出）</li>
+</ul>
+<h2>比較頁</h2>
+<ul>
+<li><a href="by-task.html">by-task</a>：依臨床任務對照</li>
+<li><a href="by-xai-paradigm.html">by-xai-paradigm</a>：依解釋方式對照</li>
+<li><a href="internal-vs-external.html">internal-vs-external</a>：內部 vs 外部驗證的 AUC</li>
+</ul>
+<h2>論文頁（已 ingest 31 篇，另加 review）</h2>
+<h3>偵測分類</h3>
+<ul>
+<li><a href="kuzan2026.html">kuzan2026</a>：Kuzan et al.（2026）DWI 深度學習偵測急性缺血性中風：多中心外部驗證</li>
+<li><a href="tuxunjiang2025.html">tuxunjiang2025</a>：Tuxunjiang et al.（2025）Cross-attention ViT 用多序列 MRI 判斷中風嚴重度</li>
+<li><a href="inamdar2026.html">inamdar2026</a>：Inamdar et al.（2026）TrustNet：結合不確定性量化與量化 Grad-CAM 的 CT 中風偵測</li>
+<li><a href="hossain2025.html">hossain2025</a>：Hossain et al.（2025）ViT-LSTM 混合模型做 CT 中風偵測與分類</li>
+<li><a href="ahmedmm2026.html">ahmedmm2026</a>：Ahmed M.M. et al.（2026）Swin Transformer–BiLSTM 與 ensemble 做多模態中風偵測與風險預測</li>
+<li><a href="lee2023.html">lee2023</a>：Lee et al.（2023）CNN 在超急性期 DWI 上偵測中風並分類血管供應區</li>
+<li><a href="elsayed2025.html">elsayed2025</a>：Elsayed et al.（2025）EBDS：ViT＋VGG16 混合模型做 CT 中風診斷</li>
+<li><a href="diaz2026.html">diaz2026</a>：Diaz et al.（2026）AGTS-Net：依解剖分區的兩階段 NCCT 中風分類</li>
+</ul>
+<h3>功能預後</h3>
+<ul>
+<li><a href="li2026.html">li2026</a>：Li et al.（2026）多參數 MRI 預測中風預後：梗塞位置＋radiomics＋腦部衰弱度</li>
+<li><a href="huangh2026.html">huangh2026</a>：Huang H. et al.（2026）Spatial radiomics nomogram 預測 AIS 不良預後（多中心）</li>
+<li><a href="gerbasi2022.html">gerbasi2022</a>：Gerbasi et al.（2022）追蹤 DWI 與 T2-FLAIR 的 radiomics 對 AIS 預後的價值</li>
+<li><a href="wangz2025.html">wangz2025</a>：Wang Z. et al.（2025）多 PLD ASL 全腦與梗塞區 radiomics 預測 AIS 預後</li>
+<li><a href="bacon2026.html">bacon2026</a>：Bacon et al.（2026）可解釋的雙流 EEG-MRI 融合找出中風運動恢復的結構—功能特徵</li>
+<li><a href="ozkara2024.html">ozkara2024</a>：Ozkara et al. (2024)（2024）只用影像參數預測前循環 LVO 病人的功能預後</li>
+<li><a href="zhangl2023.html">zhangl2023</a>：Zhang L. et al.（2023）NCCT radiomics 預測接受傳統治療的 AIS 病人預後</li>
+<li><a href="jabal2022.html">jabal2022</a>：Jabal et al.（2022）可解釋 ML 預測取栓後 3 個月功能預後</li>
+<li><a href="ozkara2023.html">ozkara2023</a>：Ozkara et al. (2023)（2023）ML 預測遠端中型血管阻塞 (DMVO) 病人的短期預後</li>
+<li><a href="liu2025.html">liu2025</a>：Liu et al.（2025）時間變化與組織層級的側枝循環預測取栓後恢復</li>
+</ul>
+<h3>併發症與無效再通</h3>
+<ul>
+<li><a href="huangl2025.html">huangl2025</a>：Huang L. et al.（2025）以 ASPECTS 分區做 CT radiomics 預測惡性腦水腫</li>
+<li><a href="cao2026.html">cao2026</a>：Cao et al.（2026）動態 CTA 全腦動靜脈側枝評估預測無效再通</li>
+<li><a href="gu2026.html">gu2026</a>：Gu et al.（2026）梗塞位置圖譜＋radiomics 預測取栓後惡性腦水腫</li>
+<li><a href="hu2025.html">hu2025</a>：Hu et al.（2025）可解釋 ML 預測取栓後臨床無效再灌流</li>
+</ul>
+<h3>風險與病因</h3>
+<ul>
+<li><a href="tang2026.html">tang2026</a>：Tang et al.（2026）頸動脈斑塊 CTA 的深度學習＋傳統特徵融合模型預測中風風險</li>
+<li><a href="sakai2026.html">sakai2026</a>：Sakai et al.（2026）可解釋 ML 判斷 ESUS 病人的鈣化頸動脈斑塊是不是元兇</li>
+<li><a href="leey2026.html">leey2026</a>：Lee Y. et al.（2026）灌流 MRI 的 hypoperfusion intensity ratio 預測 MCA 阻塞是否源自顱內動脈粥狀硬化</li>
+<li><a href="wei2026.html">wei2026</a>：Wei et al.（2026）CTA 斑塊與血管周圍脂肪 radiomics 預測同側中風復發</li>
+<li><a href="zhao2026.html">zhao2026</a>：Zhao et al.（2026）以血管周圍脂肪特徵預測第二型糖尿病病人的中風事件（多中心）</li>
+</ul>
+<h3>其他</h3>
+<ul>
+<li><a href="zatcepin2024.html">zatcepin2024</a>：Zatcepin et al.（2024）用機器學習找出簡化 TSPO PET 定量所需的資訊</li>
+<li><a href="wangm2023.html">wangm2023</a>：Wang M. et al.（2023）用 MRI 與可解釋 ML 判斷中風病人的認知與運動障礙程度</li>
+<li><a href="yin2022.html">yin2022</a>：Yin et al.（2022）MRA 深度學習區分出血型與缺血型毛毛樣腦血管病</li>
+<li><a href="ahmedae2025.html">ahmedae2025</a>：Ahmed A.E. et al.（2025）急診中風影像 AI 的系統性回顧</li>
+</ul></main></body></html>

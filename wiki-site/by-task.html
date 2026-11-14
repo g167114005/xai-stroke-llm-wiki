@@ -1,0 +1,314 @@
+<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>依臨床任務對照</title><style>:root{--bg:#F6F3EC;--ink:#1A2331;--mut:#5A6475;--rule:#D8D2C5;--acc:#0E6B70;--warn:#B3432A;--card:#FFFDF8}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.75 "Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif}
+header{border-bottom:1px solid var(--rule);background:var(--card)}header div,main{max-width:860px;margin:0 auto;padding:14px 24px}
+header a{margin-right:18px;font-weight:600}main{padding-top:28px;padding-bottom:80px}a{color:var(--acc)}
+h1{font-size:30px;line-height:1.3;margin:.2em 0 .6em}h2{font-size:21px;margin:1.8em 0 .5em;padding-bottom:4px;border-bottom:2px solid var(--rule)}h3{font-size:18px;margin:1.4em 0 .3em}
+table{border-collapse:collapse;width:100%;font-size:15px;margin:1em 0;display:block;overflow-x:auto}th,td{border:1px solid var(--rule);padding:6px 10px;text-align:left;vertical-align:top}th{background:var(--card)}
+.meta{font-size:14px;color:var(--mut);background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:10px 16px;margin-bottom:8px}.meta b{color:var(--ink)}
+.cite{font:12.5px ui-monospace,Consolas,monospace;color:var(--mut);background:var(--card);border:1px solid var(--rule);border-radius:4px;padding:0 5px;white-space:nowrap}
+blockquote{margin:1em 0;padding:8px 16px;border-left:4px solid var(--warn);background:var(--card)}code{background:var(--card);border:1px solid var(--rule);border-radius:4px;padding:0 4px;font-size:.9em}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:24px 0}.cards a{display:block;background:var(--card);border:1px solid var(--rule);border-top:5px solid var(--acc);border-radius:8px;padding:18px 20px;text-decoration:none;color:var(--ink)}
+.cards b{display:block;font-size:20px;color:var(--acc);margin-bottom:4px}.cards span{font-size:15px;color:var(--mut)}</style></head><body><header><div><a href="../index.html">首頁</a><a href="../wiki-site/index.html">Wiki</a><a href="../slides/index.html">簡報</a><a href="https://github.com/g167114005/xai-stroke-llm-wiki">GitHub</a></div></header><main><div class="meta"><b>type</b> comparison</div><h1>依臨床任務對照</h1>
+<h2>對照表</h2>
+<table>
+<thead>
+<tr>
+<th>論文</th>
+<th>任務</th>
+<th>影像</th>
+<th>模型</th>
+<th>XAI</th>
+<th>驗證方式</th>
+<th>review 的偏誤風險</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="kuzan2026.html">kuzan2026</a></td>
+<td>偵測分類</td>
+<td>DWI (MRI)</td>
+<td>deep CNN</td>
+<td>Grad-CAM</td>
+<td>外部驗證（2 家中心）</td>
+<td>High</td>
+</tr>
+<tr>
+<td><a href="tuxunjiang2025.html">tuxunjiang2025</a></td>
+<td>偵測分類</td>
+<td>多序列 MRI（DWI、T1WI、T2WI、FLAIR）</td>
+<td>Vision Transformer（cross-attention）</td>
+<td>Grad-CAM</td>
+<td>外部驗證（2 家中心）</td>
+<td>High</td>
+</tr>
+<tr>
+<td><a href="inamdar2026.html">inamdar2026</a></td>
+<td>偵測分類</td>
+<td>CT</td>
+<td>輕量 CNN（TrustNet）＋Monte Carlo dropout</td>
+<td>量化 Grad-CAM＋不確定性量化 (UQ)</td>
+<td>內部切片＋外部公開切片</td>
+<td>High</td>
+</tr>
+<tr>
+<td><a href="hossain2025.html">hossain2025</a></td>
+<td>偵測分類</td>
+<td>CT</td>
+<td>ViT-LSTM</td>
+<td>Attention map＋SHAP＋LIME</td>
+<td>內部＋Kaggle 公開資料</td>
+<td>High</td>
+</tr>
+<tr>
+<td><a href="ahmedmm2026.html">ahmedmm2026</a></td>
+<td>偵測分類</td>
+<td>CT＋臨床資料</td>
+<td>SwinT–BiLSTM＋ensemble classifier</td>
+<td>LIME＋SHAP＋Attention map＋enhanced Grad-CAM</td>
+<td>cross-validation</td>
+<td>High</td>
+</tr>
+<tr>
+<td><a href="lee2023.html">lee2023</a></td>
+<td>偵測分類</td>
+<td>DWI (MRI)</td>
+<td>Inception-v3、EfficientNet-b0、modified LeNet</td>
+<td>Grad-CAM</td>
+<td>內部</td>
+<td>High</td>
+</tr>
+<tr>
+<td><a href="elsayed2025.html">elsayed2025</a></td>
+<td>偵測分類</td>
+<td>CT</td>
+<td>ViT＋VGG16 混合分類器</td>
+<td>Grad-CAM＋LIME</td>
+<td>內部（Kaggle 公開資料）</td>
+<td>High</td>
+</tr>
+<tr>
+<td><a href="diaz2026.html">diaz2026</a></td>
+<td>偵測分類</td>
+<td>NCCT</td>
+<td>兩階段 CNN（先分解剖區、再分類）</td>
+<td>Grad-CAM</td>
+<td>內部；Kaggle 只驗證前段分類器</td>
+<td>High</td>
+</tr>
+<tr>
+<td><a href="li2026.html">li2026</a></td>
+<td>功能預後</td>
+<td>多參數 MRI（DWI、FLAIR 等）</td>
+<td>融合模型（LASSO 選特徵）</td>
+<td>SHAP</td>
+<td>外部驗證（第 5 家中心）</td>
+<td>Unclear</td>
+</tr>
+<tr>
+<td><a href="huangh2026.html">huangh2026</a></td>
+<td>功能預後</td>
+<td>DWI (MRI)</td>
+<td>nomogram（Radscore＋Locscore＋臨床）</td>
+<td>SHAP</td>
+<td>外部驗證（5 家中心）</td>
+<td>Unclear</td>
+</tr>
+<tr>
+<td><a href="gerbasi2022.html">gerbasi2022</a></td>
+<td>功能預後</td>
+<td>追蹤 DWI＋T2-FLAIR (MRI)</td>
+<td>tree ensemble</td>
+<td>TreeSHAP</td>
+<td>nested cross-validation（無外部驗證）</td>
+<td>High</td>
+</tr>
+<tr>
+<td><a href="wangz2025.html">wangz2025</a></td>
+<td>功能預後</td>
+<td>multi-PLD ASL (MRI)</td>
+<td>SVM（comprehensive model）</td>
+<td>SHAP</td>
+<td>內部（permutation test）</td>
+<td>High</td>
+</tr>
+<tr>
+<td><a href="bacon2026.html">bacon2026</a></td>
+<td>功能預後</td>
+<td>EEG＋結構 MRI</td>
+<td>DS-CMF（雙流跨模態融合）</td>
+<td>SHAP（Kernel Explainer）</td>
+<td>內部 cross-validation</td>
+<td>High</td>
+</tr>
+<tr>
+<td><a href="ozkara2024.html">ozkara2024</a></td>
+<td>功能預後</td>
+<td>CTA＋CT perfusion</td>
+<td>XGBoost（另比較 CatBoost、Random Forest）</td>
+<td>SHAP</td>
+<td>內部（單一中心）</td>
+<td>High</td>
+</tr>
+<tr>
+<td><a href="zhangl2023.html">zhangl2023</a></td>
+<td>功能預後</td>
+<td>NCCT</td>
+<td>SVM（fusion model）</td>
+<td>SHAP</td>
+<td>內部測試集（兩中心）</td>
+<td>High</td>
+</tr>
+<tr>
+<td><a href="jabal2022.html">jabal2022</a></td>
+<td>功能預後</td>
+<td>NCCT＋CTA（自動萃取）</td>
+<td>ML 模型（臨床、影像、合併）</td>
+<td>SHAP</td>
+<td>內部（兩中心）</td>
+<td>High</td>
+</tr>
+<tr>
+<td><a href="ozkara2023.html">ozkara2023</a></td>
+<td>功能預後</td>
+<td>CT perfusion＋臨床與檢驗</td>
+<td>XGBoost 等六種演算法</td>
+<td>SHAP</td>
+<td>內部（訓練／測試切分）</td>
+<td>High</td>
+</tr>
+<tr>
+<td><a href="liu2025.html">liu2025</a></td>
+<td>功能預後</td>
+<td>多期 CTA＋CT perfusion</td>
+<td>LR、SVM、RF、DT、XGBoost</td>
+<td>SHAP</td>
+<td>內部（7:3）</td>
+<td>High</td>
+</tr>
+<tr>
+<td><a href="huangl2025.html">huangl2025</a></td>
+<td>併發症與無效再通</td>
+<td>NCCT＋CTA</td>
+<td>臨床＋radiomics 融合模型</td>
+<td>SHAP</td>
+<td>外部驗證（2 家中心）</td>
+<td>High</td>
+</tr>
+<tr>
+<td><a href="cao2026.html">cao2026</a></td>
+<td>併發症與無效再通</td>
+<td>動態 CTA</td>
+<td>多種 ML 模型（Boruta＋LASSO 選特徵）</td>
+<td>SHAP（review 另記 LIME）</td>
+<td>外部驗證（另一家醫院）</td>
+<td>High</td>
+</tr>
+<tr>
+<td><a href="gu2026.html">gu2026</a></td>
+<td>併發症與無效再通</td>
+<td>MRI（梗塞位置與 radiomics）</td>
+<td>SVM（Topo-Rad）</td>
+<td>SHAP</td>
+<td>外部驗證（另一家醫院）</td>
+<td>High</td>
+</tr>
+<tr>
+<td><a href="hu2025.html">hu2025</a></td>
+<td>併發症與無效再通</td>
+<td>CTA 等影像指標＋臨床資料</td>
+<td>Random Forest（另比較 SVM、DT、KNN）</td>
+<td>SHAP</td>
+<td>內部測試集（單一中心）</td>
+<td>High</td>
+</tr>
+<tr>
+<td><a href="tang2026.html">tang2026</a></td>
+<td>風險與病因</td>
+<td>頸動脈 CTA</td>
+<td>Swin Transformer 特徵＋傳統特徵融合</td>
+<td>SHAP＋Grad-CAM</td>
+<td>內部測試集</td>
+<td>High</td>
+</tr>
+<tr>
+<td><a href="sakai2026.html">sakai2026</a></td>
+<td>風險與病因</td>
+<td>頸部 CTA</td>
+<td>CatBoost</td>
+<td>SHAP</td>
+<td>內部</td>
+<td>High</td>
+</tr>
+<tr>
+<td><a href="leey2026.html">leey2026</a></td>
+<td>風險與病因</td>
+<td>灌流 MRI</td>
+<td>XGBoost</td>
+<td>SHAP</td>
+<td>內部</td>
+<td>High</td>
+</tr>
+<tr>
+<td><a href="wei2026.html">wei2026</a></td>
+<td>風險與病因</td>
+<td>頸動脈 CTA</td>
+<td>SVM（combined model）</td>
+<td>SHAP</td>
+<td>內部（獨立測試集）</td>
+<td>High</td>
+</tr>
+<tr>
+<td><a href="zhao2026.html">zhao2026</a></td>
+<td>風險與病因</td>
+<td>CTA（血管周圍脂肪）</td>
+<td>XGBoost（combined model）</td>
+<td>SHAP</td>
+<td>外部驗證（兩組）</td>
+<td>High</td>
+</tr>
+<tr>
+<td><a href="zatcepin2024.html">zatcepin2024</a></td>
+<td>其他（影像定量）</td>
+<td>TSPO PET＋MRI</td>
+<td>random forest regressor</td>
+<td>SHAP</td>
+<td>leave-one-out</td>
+<td>High</td>
+</tr>
+<tr>
+<td><a href="wangm2023.html">wangm2023</a></td>
+<td>其他（障礙程度分級）</td>
+<td>MRI（T2 Propeller）</td>
+<td>Random Forest、LDA 等多種模型</td>
+<td>SHAP</td>
+<td>內部</td>
+<td>High</td>
+</tr>
+<tr>
+<td><a href="yin2022.html">yin2022</a></td>
+<td>其他（毛毛樣腦血管病）</td>
+<td>MRA</td>
+<td>ResNet18（transfer learning）</td>
+<td>Grad-CAM</td>
+<td>內部測試集</td>
+<td>High</td>
+</tr>
+<tr>
+<td><a href="ahmedae2025.html">ahmedae2025</a></td>
+<td>其他（回顧文章）</td>
+<td>NCCT、MRI、CTA 等</td>
+<td>（回顧，無自建模型）</td>
+<td>文中提及 Grad-CAM 與 SHAP</td>
+<td>不適用</td>
+<td>不適用（未納入）</td>
+</tr>
+</tbody>
+</table>
+<h2>怎麼讀這張表</h2>
+<ul>
+<li>任務分類參考 review 的三個決策點：再灌流分流（偵測分類）、急性併發症、功能預後 <span class="cite">review §3</span>；「風險與病因」「其他」是本 wiki 為了放進全部來源而加的分類。</li>
+<li>「review 的偏誤風險」是預測模型的評等，不是解釋可信度的評等；兩者 review 分開評 <span class="cite">review §5.4</span>。</li>
+<li>名詞看不懂請先讀 <a href="stroke-terms.html">stroke-terms</a>；偏誤風險怎麼評見 <a href="probast-ai.html">probast-ai</a>。</li>
+</ul>
+<h2>相關頁面</h2>
+<p><a href="by-xai-paradigm.html">by-xai-paradigm</a>、<a href="internal-vs-external.html">internal-vs-external</a>、<a href="stroke-terms.html">stroke-terms</a>、<a href="probast-ai.html">probast-ai</a>、<a href="review.html">review</a></p></main></body></html>
