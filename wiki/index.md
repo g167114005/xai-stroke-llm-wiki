@@ -32,4 +32,7 @@
 - [[by-xai-paradigm]]：依解釋方式對照
 - [[internal-vs-external]]：內部 vs 外部驗證的 AUC
 
-## 論文頁（已 ingest 0 篇，另加 review）
+## 論文頁（已 ingest 1 篇，另加 review）
+
+### 偵測分類
+- [[kuzan2026]]：Kuzan et al.（2026）DWI 深度學習偵測急性缺血性中風：多中心外部驗證

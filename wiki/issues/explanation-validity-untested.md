@@ -12,7 +12,7 @@ title: 解釋本身幾乎沒有被驗證過
 - **外部資料**：換一家醫院，解釋還成立嗎？
 
 ## 證據
-- （目前已 ingest 的論文中還沒有對應的證據）
+- [[kuzan2026]]：外部資料上的解釋只做了質性檢視 [review, §4.4]。
 
 ## Review 的立場
 - 20 篇 SHAP 研究沒有一篇交代 background/reference distribution [review, §4.4]。
