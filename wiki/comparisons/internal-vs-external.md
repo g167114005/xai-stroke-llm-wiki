@@ -7,6 +7,7 @@ title: 內部驗證 vs 外部驗證的 AUC
 ## 對照表
 | 論文 | 數字來源 | 前一階段 AUC | 外部（或後一階段）AUC | 出處 |
 |---|---|---|---|---|
+| [[cao2026]] | review 配對 | 0.918 | 0.755 | [review, §4.3] |
 | [[li2026]] | review 配對 | 0.84 | 0.86 | [review, §4.3] |
 | [[huangl2025]] | review 配對 | 0.78 | 0.88 | [review, §4.3] |
 | [[huangh2026]] | review（development→外部，非配對） | 0.894 | 0.874 | [review, §4.3] |

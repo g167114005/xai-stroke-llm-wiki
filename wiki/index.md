@@ -32,7 +32,7 @@
 - [[by-xai-paradigm]]：依解釋方式對照
 - [[internal-vs-external]]：內部 vs 外部驗證的 AUC
 
-## 論文頁（已 ingest 7 篇，另加 review）
+## 論文頁（已 ingest 8 篇，另加 review）
 
 ### 偵測分類
 - [[kuzan2026]]：Kuzan et al.（2026）DWI 深度學習偵測急性缺血性中風：多中心外部驗證
@@ -46,3 +46,4 @@
 
 ### 併發症與無效再通
 - [[huangl2025]]：Huang L. et al.（2025）以 ASPECTS 分區做 CT radiomics 預測惡性腦水腫
+- [[cao2026]]：Cao et al.（2026）動態 CTA 全腦動靜脈側枝評估預測無效再通

@@ -14,6 +14,7 @@ title: 依臨床任務對照
 | [[huangh2026]] | 功能預後 | DWI (MRI) | nomogram（Radscore＋Locscore＋臨床） | SHAP | 外部驗證（5 家中心） | Unclear |
 | [[gerbasi2022]] | 功能預後 | 追蹤 DWI＋T2-FLAIR (MRI) | tree ensemble | TreeSHAP | nested cross-validation（無外部驗證） | High |
 | [[huangl2025]] | 併發症與無效再通 | NCCT＋CTA | 臨床＋radiomics 融合模型 | SHAP | 外部驗證（2 家中心） | High |
+| [[cao2026]] | 併發症與無效再通 | 動態 CTA | 多種 ML 模型（Boruta＋LASSO 選特徵） | SHAP（review 另記 LIME） | 外部驗證（另一家醫院） | High |
 
 ## 怎麼讀這張表
 - 任務分類參考 review 的三個決策點：再灌流分流（偵測分類）、急性併發症、功能預後 [review, §3]；「風險與病因」「其他」是本 wiki 為了放進全部來源而加的分類。
