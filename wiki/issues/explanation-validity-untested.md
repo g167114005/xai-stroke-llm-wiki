@@ -15,6 +15,9 @@ title: 解釋本身幾乎沒有被驗證過
 - [[kuzan2026]]：外部資料上的解釋只做了質性檢視 [review, §4.4]。
 - [[tuxunjiang2025]]：外部資料上的解釋只做了質性檢視 [review, §4.4]。
 - [[inamdar2026]]：唯一做量化 fidelity 檢驗的研究；穩定性只有部分證據 [review, §4.4]。
+- [[gu2026]]：歸因穩定性只有部分證據 [review, §4.4]。
+- [[zatcepin2024]]：fidelity 只有間接證據 [review, §4.4]。
+- [[tang2026]]：SHAP 只在 Methods 提到、沒有結果 [review, §4.4]。
 
 ## Review 的立場
 - 20 篇 SHAP 研究沒有一篇交代 background/reference distribution [review, §4.4]。
