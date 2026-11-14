@@ -11,6 +11,7 @@ title: Grad-CAM 的三個弱點：解析度粗、怕假影、看不到非影像�
 
 ## 證據
 - [[kuzan2026]]：熱圖大致對到病灶，但病灶邊緣有局部對不準 [review, §3.1]。
+- [[tuxunjiang2025]]：Grad-CAM 只能呈現影像，無法說明 NIHSS 等非影像變項的作用（review 對 Grad-CAM 的通則批評）[review, §4.2]。
 
 ## Review 的立場
 - 未來應改用較高解析度的變體（例如 Guided Grad-CAM、Grad-CAM++），並採用能同時解釋影像熱圖與臨床表格變項的多模態架構 [review, §4.2]。

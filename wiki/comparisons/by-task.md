@@ -8,6 +8,7 @@ title: 依臨床任務對照
 | 論文 | 任務 | 影像 | 模型 | XAI | 驗證方式 | review 的偏誤風險 |
 |---|---|---|---|---|---|---|
 | [[kuzan2026]] | 偵測分類 | DWI (MRI) | deep CNN | Grad-CAM | 外部驗證（2 家中心） | High |
+| [[tuxunjiang2025]] | 偵測分類 | 多序列 MRI（DWI、T1WI、T2WI、FLAIR） | Vision Transformer（cross-attention） | Grad-CAM | 外部驗證（2 家中心） | High |
 
 ## 怎麼讀這張表
 - 任務分類參考 review 的三個決策點：再灌流分流（偵測分類）、急性併發症、功能預後 [review, §3]；「風險與病因」「其他」是本 wiki 為了放進全部來源而加的分類。

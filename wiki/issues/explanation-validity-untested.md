@@ -13,6 +13,7 @@ title: 解釋本身幾乎沒有被驗證過
 
 ## 證據
 - [[kuzan2026]]：外部資料上的解釋只做了質性檢視 [review, §4.4]。
+- [[tuxunjiang2025]]：外部資料上的解釋只做了質性檢視 [review, §4.4]。
 
 ## Review 的立場
 - 20 篇 SHAP 研究沒有一篇交代 background/reference distribution [review, §4.4]。
