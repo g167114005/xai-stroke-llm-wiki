@@ -38,5 +38,6 @@ node tools/render_check.js workflow/run-01    # 簡報：版面不溢出
 需要 Python（`python-docx`，以及 `pdftotext` 或 `pypdf`）；渲染檢查另需 Node、Playwright 與 Chrome。
 
 ## 注意
-- `raw/` 含尚未刊出的校樣與有版權的 PDF，不進版控，請勿上傳到公開位置。
+- review 已正式刊登：*Diagnostics* 2026, 16, 3833，https://www.mdpi.com/2075-4418/16/22/3833
+- `raw/` 含校樣與有版權的 PDF，不進版控，請勿上傳到公開位置。
 - 已知限制寫在 `wiki/log.md` 最後一段。

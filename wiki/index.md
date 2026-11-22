@@ -5,7 +5,7 @@
 第一次來：先讀 [[stroke-terms]] → [[shap]] → [[grad-cam]] → [[review]]。
 
 ## 裁判來源
-- [[review]]：我們的 critical review（MDPI Diagnostics，已接受）
+- [[review]]：我們的 critical review（Diagnostics 2026, 16, 3833，已正式刊登；全文 <https://www.mdpi.com/2075-4418/16/22/3833>）
 
 ## 觀念頁
 - [[shap]]：SHAP（Shapley Additive exPlanations）

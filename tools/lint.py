@@ -103,6 +103,7 @@ def numbers(line):
     s = CITE.sub(" ", line)
     s = LINK.sub(" ", s)
     s = re.sub(r"`[^`]*`", " ", s)
+    s = re.sub(r"https?://[^\s>）)]+", " ", s)   # 網址裡的數字不是主張，不檢查
     out = []
     for m in NUM.finditer(s):
         n = m.group(0).rstrip(",").replace(",", "")

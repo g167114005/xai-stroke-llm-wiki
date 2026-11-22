@@ -31,7 +31,7 @@ validation: 外部驗證（5 家中心）
 ## Review 的評論
 - Review 選為正文詳述的研究之一 [review, §3]。
 - Review 記載：7 家中心、分析 3923 人（收案 4891、排除 968）[review, §3.2]。
-- ⚠ 不一致：review 寫位置模型 AUC 為 0.791 [review, §3.2]；原文摘要寫 0.793 [huangh2026, p.1]（原文表格中 0.791 與 0.793 都出現，分屬不同演算法 [huangh2026, p.6]）。本 wiki 依規則採 review。
+- ⚠ 不一致：review 寫位置模型 AUC 為 0.791 [review, §3.2]；原文摘要寫 0.793 [huangh2026, p.1]（原文表格中 0.791 與 0.793 都出現，分屬不同演算法 [huangh2026, p.6]）。本 wiki 依規則採 review。正式刊登版維持 0.791，並在 Table 1 標明這是 XGB 模型的數字 [reviewpub, p.6]；所以兩邊引的是不同演算法的結果，不是抄錯。
 - 用 empirical-Bayes ComBat 處理不同掃描儀造成的 batch effect；但外部 AUC 維持住，並不能證明是 harmonization 的功勞 [review, §4.3]。
 - 沒有獨立的內部驗證階段，所以 review 不把它當成「內部→外部」的配對比較 [review, §4.3]。
 - 偏誤風險：Unclear，理由同 Li et al.（未交代流程隔離）[review, §5.4]。

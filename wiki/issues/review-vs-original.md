@@ -9,7 +9,7 @@ AGENTS.md §5 規定：原文與 review 不一致時採 review。這樣做的風
 這一頁同時是給 review 作者的校對清單。
 
 ## 證據
-- [[huangh2026]]：位置模型 AUC：review 寫 0.791 [review, §3.2]，原文摘要寫 0.793 [huangh2026, p.1]。
+- [[huangh2026]]：位置模型 AUC：review 寫 0.791 [review, §3.2]，原文摘要寫 0.793 [huangh2026, p.1]。刊登後確認：刊登版維持 0.791 並標明是 XGB 模型 [reviewpub, p.6]，原文摘要報告的是表現最佳的模型，兩者是不同演算法的數字。
 
 ## Review 的立場
 - 本 wiki 不裁決誰對，只負責把兩邊的說法與出處並列。

@@ -38,6 +38,7 @@ def main():
     home = f"""<h1>XAI 中風影像 LLM Wiki</h1>
 <p>生成式 AI 課程第 10 週作業｜北醫 G167114005 醫學院人工智慧醫療碩士在職專班 碩二 鄭為遠</p>
 <p>主題：可解釋 AI（SHAP、Grad-CAM）用在急性缺血性中風神經影像。先用「先討論、後生成」建立 LLM Wiki（ingest 32 份來源、{n} 頁），再用一張事先畫好的 Graph，只用 wiki 的內容產生教學簡報。</p>
+<p><b>2026-11-17 更新：</b>作為本 wiki 裁判來源的 review 已正式刊登於 <i>Diagnostics</i> 2026, 16, 3833（open access）：<a href="https://www.mdpi.com/2075-4418/16/22/3833">https://www.mdpi.com/2075-4418/16/22/3833</a></p>
 <div class="cards">
 <a href="wiki-site/index.html"><b>LLM Wiki</b><span>{n} 頁：論文頁、觀念頁、議題頁、比較頁。每個數字都標到來源頁碼。</span></a>
 <a href="slides/index.html"><b>教學 HTML 簡報</b><span>解釋，不等於可信：SHAP 與 Grad-CAM 的六個方法學限制（13 頁，← → 換頁）</span></a>
@@ -46,7 +47,7 @@ def main():
 <a href="{REPO}/blob/main/AGENTS.md"><b>AGENTS.md</b><span>訪談後寫成的規則：出處到頁碼、數字可回查、矛盾時以 review 為準。</span></a>
 <a href="{REPO}/blob/main/docs/01_訪談紀錄.md"><b>訪談紀錄</b><span>先討論：AI 問了八題，確認需求摘要後才建檔。</span></a>
 </div>
-<p style="color:var(--mut);font-size:15px">原始論文 PDF 與尚未刊出的校樣不在此公開；來源清單見 <a href="{REPO}/blob/main/sources.csv">sources.csv</a>。已知限制見 <a href="wiki-site/log.html">log</a>。</p>"""
+<p style="color:var(--mut);font-size:15px">引用文獻的 PDF 有版權，不在此公開；來源清單見 <a href="{REPO}/blob/main/sources.csv">sources.csv</a>。已知限制見 <a href="wiki-site/log.html">log</a>。</p>"""
     open(os.path.join(ROOT, "index.html"), "w", encoding="utf-8").write(page("XAI 中風影像 LLM Wiki", home))
     open(os.path.join(ROOT, ".nojekyll"), "w").write("")
     print("wiki-site:", len(files), "頁；index.html")

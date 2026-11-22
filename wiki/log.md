@@ -42,3 +42,9 @@
 - **閱讀深度的限制（未完全做到 AGENTS.md §7 的「讀全文」）**：review 讀了第 1–5 節全文與第 6–7 節重點；31 篇 PDF 讀的是摘要頁，加上對「SHAP／Grad-CAM／外部驗證／校準／樣本數／AUC」的逐頁定點檢索，不是每一頁都精讀。wiki 上的數字都經 lint 回查到所標頁面，但 Methods 的細節（例如前處理、缺失值處理）沒有收進來。要加深時，請逐篇重新 ingest 並在這裡加一筆。
 - **分類的限制**：`by-xai-paradigm` 的逐篇分組、`by-task` 的「風險與病因」「其他」是本 wiki 自己歸的；review 的逐篇編碼在補充資料（Table S3、S6），不在 `raw/` 裡。哪六篇屬於 review 所說的「鄰近神經血管模型」也因此沒有標。
 - **待人工確認**：`review-vs-original` 登記 1 筆不一致（Huang H. et al. 的位置模型 AUC）。
+
+## 2026-11-23　review 正式刊登後的更新
+- review 已刊登：*Diagnostics* 2026, 16, 3833（Published 17 November 2026），https://www.mdpi.com/2075-4418/16/22/3833 。新增來源 `reviewpub`（正式刊登版 PDF）作為對照；原本依校樣 ingest 的 `review` 與章節出處不動。
+- **回查**：wiki 中所有帶 `[review, §…]` 出處的句子共 164 個數字，逐一對刊登版全文，全部找得到（0 個不符）。也就是說，從校樣到刊登，wiki 引用到的數字沒有變動。
+- **`review-vs-original` 的那一筆結案**：Huang H. et al. 位置模型 AUC，刊登版維持 0.791，並在 Table 1 標明是 XGB 模型；原文摘要的 0.793 是表現最佳模型的數字。兩者是不同演算法的結果，不是抄錯。紀錄保留，並補上說明。
+- 更新 `review` 頁（刊登資訊、全文連結、DOI）、`index`、`huangh2026`、`AGENTS.md`、README 與網站首頁。簡報內容未更動（它不含刊登狀態的文字）。

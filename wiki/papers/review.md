@@ -9,9 +9,16 @@ modality: NCCT、CTA、DWI 等
 xai: SHAP、Grad-CAM
 validation: 不適用（回顧文章）
 ---
-# Review（Cheng et al., MDPI Diagnostics，已接受，校樣）
+# Review（Cheng et al., Diagnostics 2026，已正式刊登）
 
+> **已刊登**：Cheng W.-Y., Lin H.-Y., Tsai Y.-J., Ko C.-H. *Diagnostics* 2026, 16, 3833 [reviewpub, p.1]。全文（open access）：<https://www.mdpi.com/2075-4418/16/22/3833>　DOI：<https://doi.org/10.3390/diagnostics16223833>
+>
 > 這是本 wiki 的「裁判」來源：其他論文頁與它不一致時，依 AGENTS.md §5 採它的說法。也因此要特別小心，見 [[review-vs-original]]。
+
+## 刊登資訊
+- Received 31 August 2026、Revised 3 November 2026、Accepted 10 November 2026、Published 17 November 2026 [reviewpub, p.1]。
+- 開放取用，CC BY 授權 [reviewpub, p.1]。
+- 本 wiki 是在刊登前依校樣（.docx）建立的，所以出處仍標章節（§）。刊登後已把 wiki 引用 review 的數字逐一對過刊登版全文，結果記在 [[log]]。
 
 ## 一句話
 把「用 AI 看中風影像、又附上解釋圖」的研究一篇一篇拿出來檢查：模型本身可不可靠？解釋圖可不可信？結論是兩邊都還有很大的問題。
